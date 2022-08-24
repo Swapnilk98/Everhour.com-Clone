@@ -104,3 +104,28 @@ top: 4rem;
    right: 5px;
    color: blue;
 }
+.signupPage{
+    margin-top: 3rem;
+}
+.signup_box{
+    width: 480px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    height: 600px;
+    margin: auto;
+    padding: 1rem;
+}
+.signup_content>h1{
+    font-size: 1.5rem;
+}
+.signup_content>h3{
+    color: gray;
+}
+.content_input{
+    margin: 1rem;
+}
+.content_input>input{
+    border: 1px solid gray;
+    width: 350px;
+}
+.content_input>label{
+}
