@@ -9,5 +9,4 @@ function App() {
    <LargeWithAppLinksAndSocial/>
   </div>;
 }
-
 export default App;
