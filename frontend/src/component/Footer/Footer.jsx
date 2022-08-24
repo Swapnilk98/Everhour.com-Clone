@@ -10,7 +10,7 @@ import {
   chakra,
   useColorModeValue,
 } from "@chakra-ui/react";
-import { FaTwitter, FaYoutube, FaInstagram } from "react-icons/fa";
+import { FaTwitter, FaYoutube, FaLinkedin, FaFacebook } from "react-icons/fa";
 
 const ListHeader = ({ children }: { children: ReactNode }) => {
   return (
@@ -139,15 +139,18 @@ export default function LargeWithAppLinksAndSocial() {
           align={{ md: "center" }}
         >
           <Text>©2022 Everhour Terms | Privacy | Cookies | Sitemap</Text>
-          <Stack direction={"row"} spacing={6}>
+          <Stack direction={"row"} spacing={4}>
+            <SocialButton label={"Facebook"} href={"#"}>
+              <FaFacebook />
+            </SocialButton>
             <SocialButton label={"Twitter"} href={"#"}>
               <FaTwitter />
             </SocialButton>
+            <SocialButton label={"Linkedin"} href={"#"}>
+              <FaLinkedin />
+            </SocialButton>
             <SocialButton label={"YouTube"} href={"#"}>
               <FaYoutube />
-            </SocialButton>
-            <SocialButton label={"Instagram"} href={"#"}>
-              <FaInstagram />
             </SocialButton>
           </Stack>
         </Container>
