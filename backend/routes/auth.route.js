@@ -4,6 +4,7 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const AuthModel = require('../model/auth.model');
 const checkemail = require('../middlewares/checkemail');
+const userAuthentication = require('../middlewares/userAuthentication');
 AuthRouter.post('/signup', checkemail, async (req, res) => {
   let { email, pass, name } = req.body;
   bcrypt.genSalt(10, function (err, salt) {
@@ -34,4 +35,7 @@ AuthRouter.post('/login', async (req, res) => {
     return res.send({ message: 'user not found' });
   });
 });
+// AuthRouter.get('/get', userAuthentication, (req, res) => {
+//   res.send('testing');
+// });
 module.exports = AuthRouter;
