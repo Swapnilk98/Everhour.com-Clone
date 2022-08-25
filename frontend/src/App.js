@@ -1,10 +1,8 @@
 import './App.css';
-import { ClintsMainPage } from './component/Clints/ClintsMainPage';
+
 
 
 function App() {
-  return <div className="App">
- <ClintsMainPage />
-  </div>;
+  return <div className="App"></div>;
 }
 export default App;
