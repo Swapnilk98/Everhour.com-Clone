@@ -1,9 +1,10 @@
 import './App.css';
-import { Time } from './component/Time/Time';
+import { ClintsMainPage } from './component/Clints/ClintsMainPage';
+
 
 function App() {
   return <div className="App">
-    <Time />
+ <ClintsMainPage />
   </div>;
 }
 export default App;
