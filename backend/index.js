@@ -5,11 +5,15 @@ const connection = require('./connection/connect');
 const PORT = process.env.PORT;
 
 const AuthRouter = require('./routes/auth.route');
+const clientController = require('./routes/client.route');
 app.use(express.json());
 app.get('/', (req, res) => {
   res.send('server is running');
 });
 app.use(AuthRouter);
+
+app.use("/Clients",clientController);
+
 app.listen(PORT, async () => {
   try {
     await connection;

@@ -36,6 +36,6 @@ AuthRouter.post('/login', async (req, res) => {
   });
 });
 // AuthRouter.get('/get', userAuthentication, (req, res) => {
-//   res.send('testing');
+//   res.send('testing'); 
 // });
 module.exports = AuthRouter;
