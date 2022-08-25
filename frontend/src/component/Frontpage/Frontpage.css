@@ -1,11 +1,11 @@
 .container{
     height:auto;
     width: 100%;
-    border: 1px solid blue
+    /* border: 1px solid blue */
 }
 
 .star{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
     text-align: center;
     height: auto;
@@ -17,7 +17,7 @@
 .stars{
     padding-bottom: 10px;
     padding-left: 18px;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     margin-top: -6px;
     font-size: 18px;
     font-family:'geomanist-regular',
@@ -26,7 +26,7 @@
 }
 .head{
     font-size: 40px;
-    border:1px solid green;
+    /* border:1px solid green; */
     height: auto;
     width: 100%;
     padding-top: 5px;
@@ -40,7 +40,7 @@
 }
 .para{
 font-size: 24px;
-    border: 1px solid green;
+    /* border: 1px solid green; */
     height: auto;
     width: 100%;
     padding-top: 15px;
@@ -50,7 +50,7 @@ font-size: 24px;
 
 }
 .input{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     height: auto;
     width: 100%;
     justify-content: center;
@@ -64,6 +64,7 @@ font-size: 24px;
     height: 45px;
     border-radius: 4px;
     color: #767676;
+    padding-left: 5px;
 }
 .input button{
     border: none;
@@ -79,7 +80,7 @@ font-size: 24px;
 
 }
 .google{
-    border: 1px solid red;
+    /* border: 1px solid red; */
         height: auto;
         width: 100%;
         justify-content: center;
@@ -98,7 +99,7 @@ font-size: 24px;
 
 .head2{
     font-size: 34px;
-    border: 1px solid green;
+    /* border: 1px solid green; */
     height: auto;
     width: 100%;
     padding-top: 5px;
@@ -115,4 +116,13 @@ font-size: 24px;
     display: flex;
     gap: 20px;
     justify-content: center;
+    padding-top:50px;
+    padding-bottom: 80px;
+    font-family: 'geomanist-regular',
+            sans-serif;
+    color: #333333;
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 1.44;
+
 }

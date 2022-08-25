@@ -1,17 +1,20 @@
 import React from "react";
 import "./Frontpage.css";
 import { AiFillStar } from "react-icons/ai";
-import { BsStarHalf } from "react-icons/bs";
+import { BsStarHalf, BsGithub } from "react-icons/bs";
 import { FcGoogle } from "react-icons/fc";
+import { SiNotion, SiAsana, SiBasecamp, SiClickup } from "react-icons/si";
+import { FaJira, FaTrello } from "react-icons/fa";
+import { CgMonday } from "react-icons/cg";
 const Frontpage = () => {
   return (
     <div className="container">
       <div className="star">
-        <AiFillStar />
-        <AiFillStar />
-        <AiFillStar />
-        <AiFillStar />
-        <BsStarHalf />
+        <AiFillStar color="orange" />
+        <AiFillStar color="orange" />
+        <AiFillStar color="orange" />
+        <AiFillStar color="orange" />
+        <BsStarHalf color="orange" />
         <div className="stars">4.5[500+reviews]</div>
       </div>
       <div className="head">
@@ -40,13 +43,21 @@ const Frontpage = () => {
         </h1>
       </div>
       <div className="logo">
+        <SiAsana color="Magenta" />
         <div>Asana</div>
+        <FaTrello color="blue" />
         <div>Trello</div>
+        <SiBasecamp color="green" />
         <div>Basecamp</div>
+        <FaJira color="blue" />
         <div>Jira</div>
+        <BsGithub />
         <div>Github</div>
+        <SiClickup color="purple" />
         <div>ClickUp</div>
+        <CgMonday color="red" />
         <div>Monday</div>
+        <SiNotion />
         <div>Notion</div>
       </div>
     </div>
