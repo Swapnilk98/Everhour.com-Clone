@@ -36,6 +36,6 @@ AuthRouter.post('/login', async (req, res) => {
   });
 });
 // AuthRouter.get('/get', userAuthentication, (req, res) => {
-//   res.send('testing'); //mongodb+srv://SHASHI94RANJAN:shashi123@cluster0.n7mhx.mongodb.net/everhour_signup?retryWrites=true&w=majority
+//   res.send('testing'); 
 // });
 module.exports = AuthRouter;
