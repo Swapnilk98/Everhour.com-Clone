@@ -1,5 +1,6 @@
-const mongoose=require("mongoose")
+const mongoose = require('mongoose');
+require('dotenv').config();
 
-const connection=mongoose.connect("mongodb://127.0.0.1:27017/Todos")
+const connection = mongoose.connect(process.env.MONGODB_URLS);
+module.exports = connection;
 
-module.exports={connection}
