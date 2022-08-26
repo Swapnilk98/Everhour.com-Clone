@@ -28,10 +28,11 @@ const SignUp = () => {
             <Button
               className="email_btn"
               p="20px"
-              colorScheme="facebook"
-              leftIcon={<FcGoogle fontSize="2rem" color="white" />}
+              colorScheme="white"
+              padding="1.5rem"
+              leftIcon={<FcGoogle fontSize="2rem" />}
             >
-              <span style={{ margin: '0px auto 0px auto' }}>
+              <span style={{ margin: '0px auto 0px auto', color: 'gray' }}>
                 {' '}
                 Sign up with google
               </span>
@@ -48,7 +49,7 @@ const SignUp = () => {
             />
           </div>
           <div style={{ marginTop: '1.5rem' }}>
-            <Button colorScheme="teal" size="lg">
+            <Button colorScheme="green" size="lg">
               GET STARTED
             </Button>
           </div>

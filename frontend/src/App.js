@@ -5,13 +5,15 @@ import Product from './component/Products/Product';
 import ProjectCreation from './component/Products/ProjectCreation';
 import StopWatch from './component/Products/Timer/StopWatch';
 import Routing from './component/Routing';
+import SignUp from './component/Signup/SignUp';
 
 function App() {
   return (
     <div className="App">
       {/* <Routing/> */}
       {/* <ProjectCreation/> */}
-      <Login />
+
+      {/* <OuterLayout/> */}
     </div>
   );
 }

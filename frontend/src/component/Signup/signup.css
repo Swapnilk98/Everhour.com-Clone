@@ -73,8 +73,11 @@
  
  .page1_bottom{
      background-color: #ebf0ed;
-    
-     padding: 1rem;
+     font-family: 'geomanist-regular',sans-serif;
+     padding: 1.5rem;
+     font-weight: 400;
+     color: gray;
+     
  }
  .page1_bottom>.grids{
      display: grid;
@@ -172,10 +175,11 @@
     font-size: 1.2;
     font-weight: 400;
     color: gray;
-   
+  
  }
  .login_endbtn:hover{
     text-decoration: none;
+    
  }
  .login_pic{
     position: relative;

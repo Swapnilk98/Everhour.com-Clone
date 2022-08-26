@@ -16,9 +16,9 @@ const Login = () => {
     <Box className="main_login">
       <Box className="page1_top">
         <Box className="background">
-          <Box className="background_left" top="9rem"></Box>
-          <Box className="background_left_top"></Box>
-          <Box className="background_right"></Box>
+          <Box className="background_left" marginTop="4rem"></Box>
+          <Box className="background_left_top" marginTop="2rem"></Box>
+          <Box className="background_right" marginTop="2rem"></Box>
         </Box>
         <Box
           fontSize="3rem"
