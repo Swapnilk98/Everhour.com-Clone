@@ -1,17 +1,18 @@
 import './App.css';
+import Setting from './component/Payment/Setting';
+import CombineEmptyandFilled from './component/Products/CombineEmptyandFilled';
+import EmptyProjects from './component/Products/EmptyProjects';
+import Loading from './component/Products/Loading';
 import OuterLayout from './component/Products/OuterLayout';
-import Product from './component/Products/Product';
-import ProjectCreation from './component/Products/ProjectCreation';
-import StopWatch from './component/Products/Timer/StopWatch';
 import Routing from './component/Routing';
-
-
 
 function App() {
   return <div className="App">
-    {/* <Routing/> */}
-    {/* <ProjectCreation/> */}
-    <OuterLayout/>
+    {/* <OuterLayout/> */}
+    {/* <Setting/> */}
+    {/* <CombineEmptyandFilled/> */}
+    {/* <Loading/> */}
+    <Routing/>
   </div>;
 }
 export default App;

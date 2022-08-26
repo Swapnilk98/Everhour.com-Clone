@@ -2,8 +2,8 @@ import { ChevronDownIcon } from '@chakra-ui/icons'
 import { Box, Button, Input, Menu, MenuButton, MenuItem, MenuItemOption, MenuList, MenuOptionGroup, useDisclosure } from '@chakra-ui/react'
 import React from 'react'
 import { useState } from 'react'
+import SimpleSidebar from '../SideBar/SideBar'
 import LayoutActivity from './LayoutActivity'
-import LayoutBoard from './LayoutBoard'
 import LayoutList from './LayoutList'
 import LayoutSumary from './LayoutSumary'
 import ProjectCreation from './ProjectCreation'
@@ -43,7 +43,10 @@ const OuterLayout = () => {
     }
   return (
     <Box display="flex" mt="10px">
-      <Box width="300px" border="1px solid" borderColor="gray.200"></Box>
+      {/* <Box width="300px" border="1px solid" borderColor="gray.200">
+        <SimpleSidebar/>
+      </Box> */}
+   
     <Box>
         {/* //Top Navbar */}
         <Box
