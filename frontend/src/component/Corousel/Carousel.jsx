@@ -42,6 +42,8 @@ const Test = () => {
       <Box
         position={"relative"}
         height={"590px"}
+        width={"800px"}
+        marginLeft={"260px"}
         overflow={"hidden"}
         border="1px solid gray"
         borderRadius={"5px"}

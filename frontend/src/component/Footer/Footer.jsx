@@ -1,4 +1,3 @@
-import { ReactNode } from "react";
 import {
   Box,
   Container,
@@ -12,7 +11,7 @@ import {
 } from "@chakra-ui/react";
 import { FaTwitter, FaYoutube, FaLinkedin, FaFacebook } from "react-icons/fa";
 
-const ListHeader = ({ children }: { children: ReactNode }) => {
+const ListHeader = ({ children }) => {
   return (
     <Text fontWeight={"500"} fontSize={"md"} mb={2}>
       {children}
@@ -24,10 +23,6 @@ const SocialButton = ({
   children,
   label,
   href,
-}: {
-  children: ReactNode,
-  label: string,
-  href: string,
 }) => {
   return (
     <chakra.button

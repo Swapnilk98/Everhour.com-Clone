@@ -6,7 +6,7 @@
 .Master{
     height: auto;
     width: 100%;
-    /* border: 1px solid red; */
+    border: 1px solid red;
     display: flex;
     gap: 80px;
     justify-content: center;
@@ -16,7 +16,8 @@
 .Master>div{
     height: auto;
     width: 19%;
-    /* border: 1px solid red; */
+    
+    border: 1px solid red;
     
 }
 .Master h1{

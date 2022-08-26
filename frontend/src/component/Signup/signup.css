@@ -171,21 +171,55 @@
  .login_endbtn{
     margin: 1rem;
     cursor: pointer;
-    text-decoration: underline;
-    font-size: 1.2;
-    font-weight: 400;
-    color: gray;
-  
- }
- .login_endbtn:hover{
-    text-decoration: none;
-    
- }
- .login_pic{
-    position: relative;
-    text-align: right;
 
- }
- .login_women{
-    display: inline-block;
- }
+    overflow: hidden;
+}
+.grids>div:hover{
+    box-shadow: rgba(0, .5, 0, 0.20) 1.95px 1.95px 2.6px;
+}
+.grids>div>span{
+   position: absolute;
+   bottom: 10px;
+   right: 5px;
+   color: blue;
+}
+.signupPage{
+    margin-top: 3rem;
+}
+.signup_box{
+    width: 480px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    height: 620px;
+    margin: auto;
+    padding: 1rem;
+}
+.signup_content>h1{
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+.signup_content>h3{
+    font-size: 1rem;
+    font-weight: 500;
+    color: gray;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 1.5rem;
+}
+.content_input{
+   padding: 0 1.5rem 0 1.5rem;
+}
+.content_input>input{
+    border: 1px solid gray;
+    width: 350px;
+}
+
+.content_input>.radiobtn{
+    
+    display:flex;
+    text-align: center;
+    justify-content:space-between;
+    width:90%;
+    margin:.5rem;
+    color: gray;
+}
+

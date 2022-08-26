@@ -61,7 +61,7 @@ GetTodos()
       <Box mb="30px">
         <Box display="flex" alignItems="center" >
             <Box fontSize="22px" fontWeight="600" mr="20px">To Do</Box>
-             <Box fontSize="18px" borderRadius="50%" bgColor="gray.200" h="30px" w="30px">{countTodo}</Box>
+             <Box fontSize="18px" borderRadius="50%" bgColor="gray.200" h="30px" w="30px" textAlign="center">{countTodo}</Box>
              <Box>
              <Menu>
                   <MenuButton  fontSize="18px" mt="-10px" as={Button}>
@@ -126,7 +126,7 @@ GetTodos()
       <Box mt="50px" alignItems="center" mb="30px">
         <Box display="flex" alignItems="center" >
             <Box fontSize="22px" fontWeight="600" mr="20px">In Progress</Box>
-             <Box fontSize="18px" borderRadius="50%" bgColor="gray.200" h="30px" w="30px">{countInprogress}</Box>
+             <Box fontSize="18px" borderRadius="50%" textAlign="center" bgColor="gray.200" h="30px" w="30px">{countInprogress}</Box>
              <Box>
              <Menu>
                   <MenuButton  fontSize="18px" mt="-10px" as={Button}>
@@ -190,7 +190,7 @@ GetTodos()
       <Box mt="50px" alignItems="center">
         <Box display="flex" alignItems="center" >
             <Box fontSize="22px" fontWeight="600" mr="20px">Completed</Box>
-             <Box fontSize="18px" borderRadius="50%" bgColor="gray.200" h="30px" w="30px">{countCompleted}</Box>
+             <Box fontSize="18px" borderRadius="50%" bgColor="gray.200" h="30px" w="30px" textAlign="center">{countCompleted}</Box>
              <Box>
              <Menu>
                   <MenuButton  fontSize="18px" mt="-10px" as={Button}>
