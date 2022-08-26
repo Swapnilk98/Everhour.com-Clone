@@ -21,13 +21,9 @@ import { BsFillFolderFill } from "react-icons/bs";
 import { RiMoneyDollarCircleFill } from "react-icons/ri";
 import { FaFileInvoiceDollar } from "react-icons/fa";
 
-interface FeatureProps {
-  text: string;
-  iconBg: string;
-  icon?: ReactElement;
-}
 
-const Feature = ({ text, icon, iconBg }: FeatureProps) => {
+
+const Feature = ({text, icon, iconBg}) => {
   return (
     <Stack direction={"row"} align={"center"}>
       <Flex
