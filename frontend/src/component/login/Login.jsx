@@ -47,7 +47,9 @@ const Login = () => {
                 Sign up with google
               </span>
             </Button>
-            <Box m={5}>or</Box>
+            <Box m={5} color="gray">
+              or
+            </Box>
             <Box>
               <Input
                 placeholder=" email ..."
@@ -101,7 +103,7 @@ const Login = () => {
           </Box>
         </Box>
       </Box>
-      <Box>
+      <Box marginBottom="5rem">
         <Box
           fontSize="3rem"
           fontFamily="geomanist-regular sans-serif"
@@ -112,6 +114,47 @@ const Login = () => {
         <Box fontSize="1.2rem" color="gray">
           Try Everhour for free and see if it works for your business
         </Box>
+        <Box>
+          <Box margin={5} textAlign="center">
+            <Input
+              placeholder="Work Email..."
+              size="md"
+              width={300}
+              borderColor="gray.600"
+              p={5}
+              padding={6}
+              paddingBottom="-1rem"
+              marginRight={5}
+            />
+            <Button
+              colorScheme="green"
+              size="lg"
+              width="10rem"
+              marginTop="-.4rem"
+            >
+              Try it free
+            </Button>
+          </Box>
+          <Box>
+            <Button
+              className="email_btn"
+              colorScheme="white"
+              border="none"
+              leftIcon={<FcGoogle fontSize="1.5rem" />}
+            >
+              <Box className="login_endbtn">
+                {' '}
+                Or Sign up with google account
+              </Box>
+            </Button>
+          </Box>
+        </Box>
+      </Box>
+      <Box className="login_pic">
+        <img
+          className="login_women"
+          src="https://blog-cdn.everhour.com/assets/images/new-design/illustrations/primary-illustrations/footer.jpg"
+        ></img>
       </Box>
     </Box>
   );
