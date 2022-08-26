@@ -6,6 +6,7 @@ import { FcGoogle } from "react-icons/fc";
 import { SiNotion, SiAsana, SiBasecamp, SiClickup } from "react-icons/si";
 import { FaJira, FaTrello } from "react-icons/fa";
 import { CgMonday } from "react-icons/cg";
+import SplitWithImage from "../carousel1/img";
 const Frontpage = () => {
   return (
     <div className="container">
@@ -36,7 +37,7 @@ const Frontpage = () => {
         <FcGoogle />
         <a href="#">Or sign up with Google Account</a>{" "}
       </div>
-
+                 <SplitWithImage/>
       <div className="head2">
         <h1>
           Track time and watch progress inside <br></br>the most popular apps
