@@ -140,7 +140,7 @@ const ProjectCreation = () => {
           h="90vh"
           display="flex"
           mt="10px"
-          border="1px solid"
+          borderTop="1px solid"
           borderColor="gray.200"
         >
           <Box w="300px" mr="20px" h="90vh">
@@ -573,7 +573,8 @@ const ProjectCreation = () => {
         fontSize="25px"
         position="absolute"
         top="85%"
-        left="92%"
+        left="88%"
+        cursor="pointer"
       >
         ?
       </Box>

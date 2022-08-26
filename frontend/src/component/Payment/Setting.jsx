@@ -7,9 +7,7 @@ import Subscribe from "./Subscribe";
 const Setting = () => {
   const [subscribe, setSubscribe] = useState(false);
   return (
-    <Box display="flex"> 
-
-      <Box border="1px solid" borderColor="gray.300" w="70%">
+      <Box w="100%">
         <Box border="1px solid" borderColor="gray.300" h="13vh">
           <Box
             fontWeight="600"
@@ -89,7 +87,6 @@ const Setting = () => {
           </Box>
         </Box>
       </Box>
-    </Box>
   );
 };
 
