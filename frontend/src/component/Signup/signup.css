@@ -1,98 +1,177 @@
 .main_signup{
-   position: relative;
-}
-.page1_top{
-margin-top: 5rem;
-margin-bottom: 5rem;
-}
-.background{
-    margin-top: 12rem;
-}
-.page1_content{
-    margin-top: -3rem;
-}
-.page1_content>.top>h1{
-    width: 800px;
-    justify-content: center;
-    margin: auto;
-    line-height: 4rem;
-    font-size: 3rem;
-    font-weight: 600;
-    z-index: 100;
-}
-.page1_content>.top>.subtitle{
-    font-size: 1.1rem;
-    font-weight: 300;
-    color: gray;
-    line-height: 2rem;
-    margin-bottom: 2rem;
-}
-.background_left{
-    position: absolute;
-    top: 4rem;
-    width: 344px;
-    height: 363px;
-    background: url(https://blog-cdn.everhour.com/assets/images/new-design/background-elements/solid/oval-solid-orange-left.jpg) no-repeat;
-    background-size: cover;
-    z-index: -1;
-}
-.background_left_top{
-    position: absolute;
-top: 4rem;
-    left:11rem;
-    width: 152px;
-    height: 108px;
-    background: url(https://blog-cdn.everhour.com/assets/images/new-design/background-elements/green-touches-right.png) no-repeat;
-    background-size: cover;
-    z-index: -1;
-}
-.background_right{
-    position: absolute;
-    right: 1rem;
-    width: 250px;
-    height: 485px;
-    background: url(https://blog-cdn.everhour.com/assets/images/new-design/background-elements/cut-oval-dotted-orange-and-solid-green-combined.jpg) no-repeat;
-    background-size: cover;
-    z-index: -1;
-}
-.email_btn{
-    
-        background-color: white;
-
-        width:300px;
-        color: gray;
-        font-size: 1rem;
-        border: 1px solid gray;
-
-        padding:  23px
-      
-}
-.email_btn:hover{
-    background-color: white;
-}
-
-.page1_bottom{
-    background-color: #ebf0ed;
-   
-    padding: 1rem;
-}
-.page1_bottom>.grids{
-    display: grid;
-
-    grid-template-columns: repeat(3,1fr);
-    gap: 20px;
-    border-radius: .5rem;
-
-}
-.grids>div{
-    background-color: white;
-    border: 1px solid rgb(139, 230, 199);
-    border-radius: .5rem;
-    padding: .8rem;
     position: relative;
-    height: 300px;
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+ }
+ .page1_top{
+ margin-top: 5rem;
+ margin-bottom: 5rem;
+ }
+ .background{
+     margin-top: 12rem;
+ }
+ .page1_content{
+     margin-top: -3rem;
+ }
+ .page1_content>.top>h1{
+     width: 800px;
+     justify-content: center;
+     margin: auto;
+     line-height: 4rem;
+     font-size: 3rem;
+     font-weight: 600;
+     z-index: 100;
+ }
+ .page1_content>.top>.subtitle{
+     font-size: 1.1rem;
+     font-weight: 300;
+     color: gray;
+     line-height: 2rem;
+     margin-bottom: 2rem;
+ }
+ .background_left{
+     position: absolute;
+     top: 4rem;
+     width: 344px;
+     height: 363px;
+     background: url(https://blog-cdn.everhour.com/assets/images/new-design/background-elements/solid/oval-solid-orange-left.jpg) no-repeat;
+     background-size: cover;
+     z-index: -1;
+ }
+ .background_left_top{
+     position: absolute;
+ top: 4rem;
+     left:11rem;
+     width: 152px;
+     height: 108px;
+     background: url(https://blog-cdn.everhour.com/assets/images/new-design/background-elements/green-touches-right.png) no-repeat;
+     background-size: cover;
+     z-index: -1;
+ }
+ .background_right{
+     position: absolute;
+     right: 1rem;
+     width: 250px;
+     height: 485px;
+     background: url(https://blog-cdn.everhour.com/assets/images/new-design/background-elements/cut-oval-dotted-orange-and-solid-green-combined.jpg) no-repeat;
+     background-size: cover;
+     z-index: -1;
+ }
+ .email_btn{
+     
+         background-color: white;
+ 
+         width:300px;
+         color: gray;
+         font-size: 1rem;
+         border: 1px solid gray;
+ 
+         padding:  23px
+       
+ }
+ .email_btn:hover{
+     background-color: white;
+ }
+ 
+ .page1_bottom{
+     background-color: #ebf0ed;
+     font-family: 'geomanist-regular',sans-serif;
+     padding: 1.5rem;
+     font-weight: 400;
+     color: gray;
+     
+ }
+ .page1_bottom>.grids{
+     display: grid;
+ 
+     grid-template-columns: repeat(3,1fr);
+     gap: 20px;
+     border-radius: .5rem;
+ 
+ }
+ .grids>div{
+     background-color: white;
+     border: 1px solid rgb(139, 230, 199);
+     border-radius: .5rem;
+     padding: .8rem;
+     position: relative;
+     height: 300px;
+     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+     cursor: pointer;
+     overflow: hidden;
+ }
+ .grids>div:hover{
+     box-shadow: rgba(0, .5, 0, 0.20) 1.95px 1.95px 2.6px;
+ }
+ .grids>div>span{
+    position: absolute;
+    bottom: 10px;
+    right: 5px;
+    color: blue;
+ }
+ .signupPage{
+     margin-top: 3rem;
+ }
+ .signup_box{
+     width: 480px;
+     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+     height: 600px;
+     margin: auto;
+     padding: 1rem;
+ }
+ .signup_content>h1{
+     font-size: 1.5rem;
+ }
+ .signup_content>h3{
+     color: gray;
+ }
+ .content_input{
+     margin: 1rem;
+ }
+ .content_input>input{
+     border: 1px solid gray;
+     width: 350px;
+ }
+ .content_input>label{
+ }
+ .login_box{
+    width: 80%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: white;
+    margin: auto;
+    padding: 1rem;
+    margin-top: -2rem;
+    margin-bottom: 5rem;
+ }
+ .login_content{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+ }
+ .login_right{
+    text-align: left;
+    margin-top: 4.5rem;
+ }
+ .right_links{
+    color: #4070f4;
+    text-decoration: underline;
+    display: inline-block;
     cursor: pointer;
+ }
+ .right_links:hover{
+    text-decoration: none;
+ }
+ .login_right-content{
+    margin-bottom: 1rem;
+    padding-right: 2rem;
+    
+
+ }
+ .right_header{
+    font-weight: 600;
+    font-size: 1.2rem;
+ }
+ .login_endbtn{
+    margin: 1rem;
+    cursor: pointer;
+
     overflow: hidden;
 }
 .grids>div:hover{
@@ -143,3 +222,4 @@ top: 4rem;
     margin:.5rem;
     color: gray;
 }
+
