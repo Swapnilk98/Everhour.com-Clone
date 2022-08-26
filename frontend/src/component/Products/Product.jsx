@@ -31,7 +31,7 @@ const Product = () => {
     const initialRef = React.useRef(null)
     const finalRef = React.useRef(null)
   return (
-    <Box border="1px solid" borderColor="gray.200" h="100vh" w="1000px" m="auto" p="20px">
+    <Box h="100vh" w="1200px" m="auto" ml="2" p="20px">
       <Box display="flex" alignItems="center" justifyContent="space-between">
         <h1 style={{ fontSize: "24px" }}>Projects</h1>
         <Button style={{ backgroundColor: "#24be6a",color:"white"}} onClick={()=>{onOpen()}} color="whi" size="md">

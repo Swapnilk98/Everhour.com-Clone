@@ -11,7 +11,6 @@ const Todos=await TodoModel.find()
 })
 
 todoRouter.post("/create",async(req,res)=>{
-    console.log("AAAAAA",req.body)
     const {todo}=req.body
 
     let NewTodo=new TodoModel({

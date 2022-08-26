@@ -269,7 +269,7 @@ const ProjectCreation = () => {
               color="gray.400"
               mt="25px"
               bg="white"
-              ml="-150px"
+              // ml="-150px"
             >
               + Add Task
             </Button>
@@ -402,7 +402,7 @@ const ProjectCreation = () => {
               color="gray.400"
               mt="25px"
               bg="white"
-              ml="-150px"
+              // ml="-150px"
             >
               + Add Task
             </Button>
@@ -536,7 +536,7 @@ const ProjectCreation = () => {
               color="gray.400"
               mt="25px"
               bg="white"
-              ml="-150px"
+              // ml="-150px"
             >
               + Add Task
             </Button>
