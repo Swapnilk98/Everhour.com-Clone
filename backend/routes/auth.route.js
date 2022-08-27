@@ -6,15 +6,15 @@ const AuthModel = require('../model/auth.model');
 const checkemail = require('../middlewares/checkemail');
 const userAuthentication = require('../middlewares/userAuthentication');
 AuthRouter.post('/signup', checkemail, async (req, res) => {
-  let { email, pass, name } = req.body;
+  console.log(req.body);
+  const { pass } = req.body;
   bcrypt.genSalt(10, function (err, salt) {
     bcrypt.hash(pass, salt, function (err, hash) {
-      const result = new AuthModel({ email, pass: hash, name });
+      const result = new AuthModel({ ...req.body, pass: hash });
       result.save((error, succes) => {
         if (error) {
           return res.send({ message: 'signup failed' });
         }
-
         return res.send({ message: 'signup Successfull' });
       });
     });
@@ -36,6 +36,6 @@ AuthRouter.post('/login', async (req, res) => {
   });
 });
 // AuthRouter.get('/get', userAuthentication, (req, res) => {
-//   res.send('testing'); 
+//   res.send('testing');
 // });
 module.exports = AuthRouter;

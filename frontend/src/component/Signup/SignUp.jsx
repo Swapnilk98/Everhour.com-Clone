@@ -6,8 +6,17 @@ import { Button, Input } from '@chakra-ui/react';
 //   BsFillEnvelopeFill,
 // } from 'react-icons/bs';
 import { FcGoogle } from 'react-icons/fc';
+import { useState } from 'react';
 
 const SignUp = () => {
+  const [email, setEmail] = useState('');
+
+  const submitEmail = () => {
+    if (email !== '') {
+      localStorage.setItem('sign_email', email);
+    }
+  };
+
   return (
     <div className="main_signup">
       <div className="page1_top">
@@ -28,10 +37,11 @@ const SignUp = () => {
             <Button
               className="email_btn"
               p="20px"
-              colorScheme="facebook"
-              leftIcon={<FcGoogle fontSize="2rem" color="white" />}
+              colorScheme="white"
+              padding="1.5rem"
+              leftIcon={<FcGoogle fontSize="2rem" />}
             >
-              <span style={{ margin: '0px auto 0px auto' }}>
+              <span style={{ margin: '0px auto 0px auto', color: 'gray' }}>
                 {' '}
                 Sign up with google
               </span>
@@ -45,10 +55,11 @@ const SignUp = () => {
               width={300}
               borderColor="gray.600"
               p={6}
+              onChange={(e) => setEmail(e.target.value)}
             />
           </div>
           <div style={{ marginTop: '1.5rem' }}>
-            <Button colorScheme="teal" size="lg">
+            <Button colorScheme="green" size="lg" onClick={submitEmail}>
               GET STARTED
             </Button>
           </div>
