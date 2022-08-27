@@ -23,7 +23,6 @@ import {
   ChevronDownIcon,
   ChevronRightIcon,
 } from "@chakra-ui/icons";
-
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
 
@@ -275,9 +274,7 @@ const MobileNavItem = ({ label, children, href }) => {
   );
 };
 
-
-
-const NAV_ITEMS  = [
+const NAV_ITEMS = [
   {
     label: "Everhour",
   },
@@ -286,12 +283,32 @@ const NAV_ITEMS  = [
 
     children: [
       {
-        label: "Job Board",
+        label: "Asana",
 
         href: "#",
       },
       {
-        label: "Freelance Projects",
+        label: "Basecamp",
+
+        href: "#",
+      },
+      {
+        label: "Jira",
+
+        href: "#",
+      },
+      {
+        label: "GitHub",
+
+        href: "#",
+      },
+      {
+        label: "TodoList",
+
+        href: "#",
+      },
+      {
+        label: "Xero",
 
         href: "#",
       },
