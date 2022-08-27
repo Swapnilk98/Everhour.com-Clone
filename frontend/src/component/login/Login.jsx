@@ -11,7 +11,26 @@ import {
 } from '@chakra-ui/react';
 import '../Signup/signup.css';
 import { FcGoogle } from 'react-icons/fc';
+import { useState } from 'react';
 const Login = () => {
+  const [email, setEmail] = useState('');
+  const [pass, setPass] = useState('');
+
+  const login = () => {
+    const payload = {
+      email,
+      pass,
+    };
+    fetch('http://localhost:8000/login', {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json',
+      },
+      body: JSON.stringify(payload),
+    })
+      .then((res) => res.json())
+      .then((d) => localStorage.setItem('login_message', JSON.stringify(d)));
+  };
   return (
     <Box className="main_login">
       <Box className="page1_top">
@@ -57,6 +76,7 @@ const Login = () => {
                 width={300}
                 borderColor="gray.600"
                 p={5}
+                onChange={(e) => setEmail(e.target.value)}
               />
             </Box>
             <Box margin={5}>
@@ -66,10 +86,16 @@ const Login = () => {
                 width={300}
                 borderColor="gray.600"
                 p={5}
+                onChange={(e) => setPass(e.target.value)}
               />
             </Box>
             <Box style={{ marginTop: '1.5rem' }}>
-              <Button colorScheme="green" size="lg" width="10rem">
+              <Button
+                colorScheme="green"
+                size="lg"
+                width="10rem"
+                onClick={login}
+              >
                 Log in
               </Button>
             </Box>
@@ -103,7 +129,7 @@ const Login = () => {
           </Box>
         </Box>
       </Box>
-      <Box marginBottom="5rem">
+      <Box marginBottom="5rem" textAlign="center">
         <Box
           fontSize="3rem"
           fontFamily="geomanist-regular sans-serif"
@@ -140,9 +166,10 @@ const Login = () => {
               className="email_btn"
               colorScheme="white"
               border="none"
+              width="329px"
               leftIcon={<FcGoogle fontSize="1.5rem" />}
             >
-              <Box className="login_endbtn">
+              <Box className="login_endbtn" color="gray">
                 {' '}
                 Or Sign up with google account
               </Box>

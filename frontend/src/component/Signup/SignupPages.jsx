@@ -15,12 +15,30 @@ import {
 import React, { useState } from 'react';
 import './signup.css';
 const SignupPages = () => {
+  const email = localStorage.getItem('sign_email');
   const [selectedStage, setSelectedStage] = useState(1);
   const [one, setOne] = useState({});
   const [two, setTwo] = useState({});
   const [three, setThree] = useState({});
   const [four, setFour] = useState({});
-
+  const submitData = () => {
+    const payload = {
+      email,
+      ...one,
+      ...two,
+      ...three,
+      ...four,
+    };
+    fetch('http://localhost:8000/signup', {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json',
+      },
+      body: JSON.stringify(payload),
+    })
+      .then((res) => res.json())
+      .then((d) => console.log(d));
+  };
   return (
     <Box className="signupPage">
       <Box className="signup_box">
@@ -51,6 +69,7 @@ const SignupPages = () => {
             setSelectedStage={setSelectedStage}
             four={four}
             setFour={setFour}
+            submutData={submitData}
           />
         )}
       </Box>
@@ -117,7 +136,7 @@ const StageOne = ({ selectedStage, setSelectedStage, one, setOne }) => {
             <FormLabel>Password</FormLabel>
             <Input
               type="password"
-              pass="pass"
+              name="pass"
               placeholder="Enter your password"
               borderColor="gray.400"
               onChange={(e) => handleChange(e)}
@@ -154,7 +173,6 @@ const StageOne = ({ selectedStage, setSelectedStage, one, setOne }) => {
 };
 
 const StageTwo = ({ selectedStage, setSelectedStage, two, setTwo }) => {
-  console.log(two);
   const handleChange = (e) => {
     if (e.target.name === 'radio') {
       setTwo({
@@ -342,8 +360,13 @@ const StageThree = ({ selectedStage, setSelectedStage, three, setThree }) => {
   );
 };
 
-const StageFour = ({ selectedStage, setSelectedStage, four, setFour }) => {
-  console.log(four);
+const StageFour = ({
+  selectedStage,
+  setSelectedStage,
+  four,
+  setFour,
+  submutData,
+}) => {
   const handleChange = (e) => {
     if (e.target.name === 'radio') {
       setFour({
@@ -358,7 +381,7 @@ const StageFour = ({ selectedStage, setSelectedStage, four, setFour }) => {
     }
   };
   const handleStage4 = () => {
-    setSelectedStage(selectedStage + 1);
+    submutData();
   };
   return (
     <Box>
@@ -382,7 +405,7 @@ const StageFour = ({ selectedStage, setSelectedStage, four, setFour }) => {
               This Project is billable
             </FormHelperText>
           </FormControl>
-          <FormControl Required>
+          <FormControl>
             <FormLabel>Client</FormLabel>
             <Input
               placeholder="Client Name(optional)"
@@ -391,9 +414,9 @@ const StageFour = ({ selectedStage, setSelectedStage, four, setFour }) => {
               onChange={(e) => handleChange(e)}
             />
           </FormControl>
-          <FormControl Required>
+          <FormControl>
             <FormLabel>Tasks</FormLabel>
-            <FormControl Required>
+            <FormControl>
               <Input
                 placeholder="Developement area"
                 borderColor="gray.300"
@@ -401,7 +424,7 @@ const StageFour = ({ selectedStage, setSelectedStage, four, setFour }) => {
                 onChange={(e) => handleChange(e)}
               />
             </FormControl>
-            <FormControl Required>
+            <FormControl>
               <Input
                 placeholder="Work category"
                 borderColor="gray.300"
@@ -409,7 +432,7 @@ const StageFour = ({ selectedStage, setSelectedStage, four, setFour }) => {
                 onChange={(e) => handleChange(e)}
               />
             </FormControl>
-            <FormControl Required>
+            <FormControl>
               <Input
                 placeholder="Task Category"
                 borderColor="gray.300"
@@ -417,7 +440,7 @@ const StageFour = ({ selectedStage, setSelectedStage, four, setFour }) => {
                 onChange={(e) => handleChange(e)}
               />
             </FormControl>
-            <FormControl Required>
+            <FormControl>
               <Input
                 placeholder="Task name..."
                 borderColor="gray.300"

@@ -5,6 +5,7 @@
  .page1_top{
  margin-top: 5rem;
  margin-bottom: 5rem;
+ text-align: center;
  }
  .background{
      margin-top: 12rem;
@@ -56,6 +57,37 @@
      background-size: cover;
      z-index: -1;
  }
+ .background_right-pricing{
+    position: absolute;
+  
+    right: 1rem;
+    width: 400px;
+    height: 485px;
+    background: url(https://blog-cdn.everhour.com/assets/images/new-design/background-elements/oval-green-dotted-yellow-combined.jpg) no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+ 
+ .demo_background_left{
+    position: absolute;
+   left:8rem;
+    top: 18rem;
+    width: 350px;
+    height: 350px;
+    background: url(https://blog-cdn.everhour.com/assets/images/new-design/background-elements/solid/oval-solid-orange.jpg) no-repeat;
+    background-size: cover;
+    z-index: -1;
+ }
+ .demo_background_right{
+    position: absolute;
+    top: 12rem;
+    right: 4rem;
+    width: 400px;
+    height: 485px;
+    background: url(https://blog-cdn.everhour.com/assets/images/new-design/background-elements/oval-dotted-orange-and-solid-green-combined.jpg) no-repeat;
+    background-size: cover;
+    z-index: -1;
+ }
  .email_btn{
      
          background-color: white;
@@ -78,6 +110,7 @@
      padding: 1.5rem;
      font-weight: 400;
      color: gray;
+    
      
  }
  .page1_bottom>.grids{
@@ -86,7 +119,7 @@
      grid-template-columns: repeat(3,1fr);
      gap: 20px;
      border-radius: .5rem;
- 
+     text-align: center;
  }
  .grids>div{
      background-color: white;
@@ -118,6 +151,9 @@
      margin: auto;
      padding: 1rem;
  }
+ .signup_content{
+    text-align: center;
+ }
  .signup_content>h1{
      font-size: 1.5rem;
  }
@@ -141,6 +177,7 @@
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     background-color: white;
     margin: auto;
+    text-align: center;
     padding: 1rem;
     margin-top: -2rem;
     margin-bottom: 5rem;
@@ -227,3 +264,88 @@
     color: gray;
 }
 
+.login_pic{
+    text-align: right;
+}
+.login_women{
+    display:inline-block;
+}
+.login_endbtn{
+   color: gray;
+   font-weight: 400;
+   text-decoration: underline;
+
+}
+.login_endbtn:hover{
+    text-decoration: none;
+}
+.pricing_box{
+    width:300px;
+        padding:2rem;
+        padding-top: none;
+        text-align:left;
+}
+.pricing_title{
+    font-size: 2rem;
+    font-weight: 500;
+}
+.pricing_subtitle{
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: gray;
+    
+}
+.pricing_ammount{
+    font-size: 4rem;
+    font-weight: 500;
+    color: #57bb71;
+}
+.pricing_ammount-label{
+    color: rgb(75, 70, 70);
+}
+
+.pricing_bottom{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: space-around;
+    padding: 2rem;
+    margin: 1rem;
+}
+.currency_drop:active{
+border: none;
+}
+.currency_drop:focus{
+    border: none;
+    }
+
+.pricing_bottom-form{
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    justify-content: space-around;
+  
+    width: 92%;
+    gap: 5rem;
+    margin: auto;
+   
+   
+}
+.demo_box{
+    width:50%;
+    padding:3rem;
+    padding-top: none;
+    text-align:left;
+    margin: auto;
+    background-color: white;
+    
+}
+.demo_box:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.demo_content_header{
+    margin-left: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.demo_list{
+color:'red'
+}

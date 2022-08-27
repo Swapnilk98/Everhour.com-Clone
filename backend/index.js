@@ -1,10 +1,10 @@
 const express = require('express');
 const app = express();
 require('dotenv').config();
-
-const Todologger=require("./Routes/todo.route")
-const TodoInpro=require("./Routes/todoInprogress.route")
-const TodoComp=require("./Routes/todocomp.route")
+const cors = require('cors');
+const Todologger = require('./Routes/todo.route');
+const TodoInpro = require('./Routes/todoInprogress.route');
+const TodoComp = require('./Routes/todocomp.route');
 
 const connection = require('./connection/connect');
 const PORT = process.env.PORT;
@@ -13,7 +13,7 @@ const AuthRouter = require('./routes/auth.route');
 const clientController = require('./routes/client.route');
 
 app.use(express.json());
-
+app.use(cors());
 
 app.get('/', (req, res) => {
   res.send('server is running');
@@ -21,13 +21,11 @@ app.get('/', (req, res) => {
 
 app.use(AuthRouter);
 
+app.use('/todo', Todologger);
+app.use('/todoin', TodoInpro);
+app.use('/todocomp', TodoComp);
 
-app.use("/todo",Todologger)
-app.use("/todoin",TodoInpro)
-app.use("/todocomp",TodoComp)
-
-
-app.use("/Clients",clientController);
+app.use('/Clients', clientController);
 
 app.listen(PORT, async () => {
   try {
