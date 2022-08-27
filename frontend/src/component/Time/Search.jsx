@@ -22,7 +22,9 @@ import {
 } from "@chakra-ui/react";
 import { AddIcon, Search2Icon } from "@chakra-ui/icons";
 import React, { useEffect, useState } from "react";
-
+import axios from 'axios'
+import { addintime, gettime } from "../../Redux/TimeClient/action";
+import { useDispatch } from "react-redux";
 export const Search = () => {
   const [formData,setFormData]=useState({
 
@@ -84,33 +86,38 @@ useEffect(() => {
 }, [endTime])
 // console.log(convertDatePickerTimeToMySQLTime(result)); // 👉️ Mon Mar 14 2022 11:25:30
 
+const dispatch=useDispatch()
 const handdleReport=()=>
 {
-   console.log(formData);
+  if(formData){
+    dispatch(addintime(formData)).then((res)=>{
+      dispatch(gettime())
+    })
+}
 
  }
 
   return (
-    <Box w={"1050px"} h="60px" mt={2} border="1px solid gray">
-      <Flex h="60px">
+    <Box  h="50px" mt={2}  border="1px solid" borderColor={"gray.300"} borderRadius="5px" m="auto" w="91%">
+      <Flex h="50px">
         <Box>
-          <Stack spacing={4} width="">
+          <Stack spacing={4}   width={"500px"}>
             <InputGroup>
               <InputLeftElement
-                mt="2"
+                mt="1"
                 pointerEvents="none"
                 children={<Search2Icon color="gray.300" />}
               />
               <Input
-                mt="3"
+                mt="2"
                 variant="unstyled"
-                textAlign={"center"}
+                textAlign={"left"}
                 size="lg"
                 color="gray.300"
-                width={"580px"}
-                placeholder="Enter amount"
+                width={"500px"}
+                placeholder="Search Here....."
               />
-             <Button  mt="2"  onClick={onOpen} variant='ghost'><AddIcon color={"gray.300"} /></Button>
+             <Button  mt="1"  onClick={onOpen} variant='ghost'><AddIcon color={"gray.300"} /></Button>
       <Modal
         isOpen={isOpen}
         onClose={onClose}
@@ -127,7 +134,7 @@ const handdleReport=()=>
             </FormControl>
 
             <FormControl mt={4}>
-              <FormLabel>Last name</FormLabel>
+              <FormLabel>Project Name</FormLabel>
               <Input type={"text"}   name="project"
           onChange={handleChange} placeholder='project name' />
             </FormControl>
@@ -146,8 +153,9 @@ const handdleReport=()=>
         </Box>
 
         <Box
-          borderLeft={"1px solid gray"}
-          borderRight={"1px solid gray"}
+          borderLeft={"1px solid"}
+          borderColor={"gray.300"}
+          
           width="150px"
         >
           <FormControl
@@ -156,12 +164,13 @@ const handdleReport=()=>
             alignItems="center"
             color={"gray.300"}
           >
-            <FormLabel fontSize={"14px"} htmlFor="email-alerts" mb="0">
+            <FormLabel fontSize={"14px"} htmlFor="email-alerts" ml="2" >
               Time Period
             </FormLabel>
             <Switch id="email-alerts" />
           </FormControl>
           <Input
+         
            type={"number"}   name="timeHour"
            onChange={handleChange}
             variant="unstyled"
@@ -171,8 +180,11 @@ const handdleReport=()=>
           />
         </Box>
 
-        <Box borderRight={"1px solid gray"} width="150px">
-          <Text fontSize={"14px"} mb="0" color="gray.300">
+        <Box width="150px"  borderLeft={"1px solid"}
+          
+          borderRight={"1px solid"} 
+          borderColor={"gray.300"}>
+          <Text fontSize={"14px"} mb="0" color="gray.300" ml="2" >
             Date
           </Text>
 
@@ -190,7 +202,7 @@ const handdleReport=()=>
           <Button
           onClick={handdleReport}
             borderRadius={"none"}
-            h="100%"
+            h="99%"
             w={"100%"}
             colorScheme="whatsapp"
           >
