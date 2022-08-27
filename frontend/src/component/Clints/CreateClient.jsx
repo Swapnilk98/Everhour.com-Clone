@@ -16,7 +16,9 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 import React, { useState } from "react";
-
+import axios from 'axios'
+import { addinClients, getClients } from "../../Redux/TimeClient/action";
+import { useDispatch } from "react-redux";
 export const CreateClient = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [formData, setFormData] = useState({});
@@ -29,9 +31,16 @@ export const CreateClient = () => {
       [inputName]: e.target.value,
     });
   };
+
+const dispatch=useDispatch()
   const haddleClickClient = () => {
-    console.log(formData);
-  };
+    if(formData){
+      dispatch(addinClients(formData)).then((res)=>{
+        dispatch(getClients())
+      })
+    }
+};
+  
   return (
     <Box mr="10">
       <Button
@@ -108,5 +117,5 @@ export const CreateClient = () => {
         </ModalContent>
       </Modal>
     </Box>
-  );
+  )
 };

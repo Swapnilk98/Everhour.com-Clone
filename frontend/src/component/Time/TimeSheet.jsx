@@ -2,26 +2,25 @@ import FullCalendar from '@fullcalendar/react';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
 import interactionPlugin from '@fullcalendar/interaction';
-
-const events = [
-  {
-    id: 1,
-    title: 'event 1',
-    start: '2022-08-24T10:00:00',
-    end: '2022-08-24T12:00:00',
-  },
-  {
-    id: 2,
-    title: 'event 2',
-    start: '2022-08-25T10:00:00',
-    end: '2022-08-25T12:00:00',
-  }
-
-];
+import axios from 'axios'
+import { useEffect, useState } from 'react';
+import { gettime } from '../../Redux/TimeClient/action';
+import { useDispatch, useSelector } from 'react-redux';
 
 function FullCalendarApp() {
+ 
+  const {timedata}  = useSelector(
+    (state) => state.TimeClientReducer
+  );
+console.log(timedata);
+  const dispatch = useDispatch();
+  
+      useEffect(() => {
+        dispatch(gettime())
+      }, []);
+
   return (
-    <div className="App">
+    <div>
       <FullCalendar
         plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
         initialView="dayGridMonth"
@@ -34,7 +33,7 @@ function FullCalendarApp() {
             click: () => console.log('new event'),
           },
         }}
-        events={events}
+        events={timedata}
         eventColor="green"
         nowIndicator
         dateClick={(e) => console.log(e.dateStr)}

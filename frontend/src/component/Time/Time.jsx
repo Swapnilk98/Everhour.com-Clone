@@ -1,3 +1,4 @@
+import { ChevronDownIcon, ChevronRightIcon, ChevronUpIcon } from "@chakra-ui/icons";
 import {
   Accordion,
   AccordionButton,
@@ -5,35 +6,45 @@ import {
   AccordionItem,
   AccordionPanel,
   Box,
+  Button,
+  Divider,
   Flex,
 } from "@chakra-ui/react";
-import React from "react";
-import SimpleSidebar from "../SideBar/SideBar";
+import React, { useState } from "react";
 import { Search } from "./Search";
 import FullCalendarApp from "./TimeSheet";
 
 export const Time = () => {
+  const [show, setShow] = useState(false)
+  const handdleDown=()=>
+  {
+    setShow(false)
+  }
+  const handdleUp=()=>
+  {
+    setShow(true)
+  }
   return (
-    <Box>
-      <Flex gap="20px">
-        <Box>
-          <Search />
+    <Box >
+      <Flex >
 
-          <Accordion defaultIndex={[0]} allowMultiple mt="10">
-            <AccordionItem>
-              <h2>
-                <AccordionButton>
-                  <AccordionIcon />
-                  <Box flex="1" textAlign="left">
-                    This Week .....
-                  </Box>
-                </AccordionButton>
-              </h2>
-              <AccordionPanel pb={4} h="100%">
-                <FullCalendarApp />
-              </AccordionPanel>
-            </AccordionItem>
-          </Accordion>
+        
+        <Box w="100%">
+          <Search />
+        {show?  <Box h="6" fontSize={"24px"} alignContent={"left"} mt="10" w="100%" onClick={handdleDown}>
+          <ChevronDownIcon /> This Week .....
+  </Box>:
+  <Box h="6" fontSize={"24px"} alignContent={"left"} mt="10" w="100%" onClick={handdleUp}>
+          <ChevronRightIcon /> This Week .....
+  </Box>
+}
+               
+               <Box mt="10">
+               {
+                  show?<FullCalendarApp />:""
+                }
+               </Box>
+               <Divider />
         </Box>
       </Flex>
     </Box>
