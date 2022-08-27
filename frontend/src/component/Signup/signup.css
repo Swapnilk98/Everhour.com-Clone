@@ -1,5 +1,6 @@
 .main_signup{
     position: relative;
+    text-align: center;
  }
  .page1_top{
  margin-top: 5rem;
@@ -168,7 +169,10 @@
  }
  .content_input>label{
  }
- .login_box,.pricing_box{
+ .main_login{
+    text-align: center;
+ }
+ .login_box{
     width: 80%;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     background-color: white;
