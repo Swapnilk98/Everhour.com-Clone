@@ -45,7 +45,6 @@ const Test = () => {
         width={"800px"}
         marginLeft={"260px"}
         overflow={"hidden"}
-        border="1px solid gray"
         borderRadius={"5px"}
       >
         {/* CSS files for react-slick */}
@@ -63,7 +62,6 @@ const Test = () => {
         {/* Left Icon */}
         <IconButton
           aria-label="left-arrow"
-          colorScheme="messenger"
           borderRadius="full"
           position="absolute"
           left={side}
@@ -77,7 +75,7 @@ const Test = () => {
         {/* Right Icon */}
         <IconButton
           aria-label="right-arrow"
-          colorScheme="messenger"
+          color={"black"}
           borderRadius="full"
           position="absolute"
           right={side}

@@ -21,9 +21,7 @@ import { BsFillFolderFill } from "react-icons/bs";
 import { RiMoneyDollarCircleFill } from "react-icons/ri";
 import { FaFileInvoiceDollar } from "react-icons/fa";
 
-
-
-const Feature = ({text, icon, iconBg}) => {
+const Feature = ({ text, icon, iconBg }) => {
   return (
     <Stack direction={"row"} align={"center"}>
       <Flex
@@ -66,7 +64,9 @@ export default function SplitWithImage() {
               />
             }
           >
-            <Feature
+
+           
+            <Feature 
               icon={<Icon as={IoMdTime} color={"blue.500"} w={5} h={5} />}
               text={"Time tracking"}
             />
