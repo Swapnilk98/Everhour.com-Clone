@@ -1,10 +1,11 @@
-import { Box, CloseButton, Divider, Flex, Image, Text, useDisclosure } from '@chakra-ui/react'
+import { Box, Button, CloseButton, Divider, Flex, Image, Text, useDisclosure } from '@chakra-ui/react'
 import React from 'react'
 import { useState } from 'react'
 import { ClintsMainPage } from '../Clints/ClintsMainPage'
 import { Home } from '../HomeProjects/Home'
 import Setting from '../Payment/Setting'
 import OuterLayout from '../Products/OuterLayout'
+import Product from '../Products/Product'
 import SimpleSidebar from '../SideBar/SideBar'
 import { Time } from '../Time/Time'
 
@@ -15,6 +16,7 @@ const DashboardMain = () => {
     const [client, setclient] = useState(false)
     const [setting, setSetting] = useState(false)
     const { isOpen, onOpen, onClose } = useDisclosure();
+    const [logout, setlogout] = useState(false)
 
     const HandleHome=()=>{
         sethome(true)
@@ -112,8 +114,9 @@ const DashboardMain = () => {
         <CloseButton display={{ base: 'flex', md: 'none' }} onClick={onClose} />
       </Flex>
 
-      <Divider />
-
+      <Divider mb="10px" />
+       
+      
       <Flex h="16" backgroundColor={setting ? "#d7f3e3" : ""} cursor="pointer" _hover={{backgroundColor:"#d7f3e3"}} borderRadius="5px" pl="10px" alignItems="center" mx="5" gap="10px"  onClick={HandleSetting}>
       <Image  w="25px" h="25px" src="data:image/svg+xml;charset=utf-8,%3Csvg width='20' height='20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M9.372 20h1.256a1.843 1.843 0 001.84-1.841v-.425a8.08 8.08 0 001.255-.52l.3.3c.728.729 1.895.711 2.604 0l.888-.886c.709-.709.729-1.876 0-2.604l-.301-.301a8.07 8.07 0 00.52-1.254h.425A1.843 1.843 0 0020 10.628V9.372a1.843 1.843 0 00-1.841-1.84h-.425a8.07 8.07 0 00-.52-1.255l.3-.3c.73-.729.71-1.896 0-2.604l-.886-.887a1.841 1.841 0 00-2.604 0l-.301.3a8.07 8.07 0 00-1.254-.52V1.84A1.843 1.843 0 0010.628 0H9.372a1.843 1.843 0 00-1.84 1.841v.425c-.432.138-.852.312-1.255.52l-.3-.3a1.841 1.841 0 00-2.604 0l-.887.886a1.841 1.841 0 000 2.605l.3.3a8.076 8.076 0 00-.52 1.254H1.84A1.843 1.843 0 000 9.372v1.256c0 1.015.826 1.84 1.841 1.84h.425c.138.432.312.852.52 1.255l-.3.3a1.841 1.841 0 000 2.604l.886.888c.708.708 1.876.73 2.604 0l.301-.301c.403.208.823.382 1.254.52v.425c0 1.015.826 1.841 1.841 1.841zm-1.108-3.274a6.908 6.908 0 01-1.79-.743.589.589 0 00-.713.09l-.613.613a.67.67 0 01-.947 0l-.887-.888a.67.67 0 010-.946l.613-.613a.586.586 0 00.09-.712 6.907 6.907 0 01-.743-1.79.586.586 0 00-.568-.44h-.865a.67.67 0 01-.67-.67V9.373c0-.369.301-.669.67-.669h.865c.268 0 .5-.18.568-.44.162-.628.412-1.23.743-1.79a.586.586 0 00-.09-.712l-.613-.613a.67.67 0 010-.947l.888-.887a.669.669 0 01.946 0l.613.613c.189.189.482.226.712.09a6.907 6.907 0 011.79-.743c.26-.067.44-.3.44-.568v-.865c0-.369.3-.67.67-.67h1.255c.369 0 .669.301.669.67v.865c0 .268.18.501.44.568.628.162 1.23.412 1.79.743.23.136.523.099.712-.09l.613-.613a.67.67 0 01.947 0l.887.888a.669.669 0 010 .946l-.613.613a.586.586 0 00-.09.712c.331.56.581 1.162.743 1.79.067.26.3.44.568.44h.865c.369 0 .67.3.67.67v1.255c0 .369-.301.669-.67.669h-.865c-.267 0-.5.18-.568.44a6.903 6.903 0 01-.743 1.79c-.136.23-.099.523.09.712l.613.613a.67.67 0 010 .947l-.888.887a.67.67 0 01-.946 0l-.613-.613a.586.586 0 00-.712-.09 6.907 6.907 0 01-1.79.743.586.586 0 00-.44.568v.865c0 .369-.3.67-.67.67H9.373a.67.67 0 01-.669-.67v-.865c0-.268-.18-.5-.44-.568z' fill='%23A2AAB1'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.648 10c0 2.4 1.953 4.352 4.352 4.352 2.4 0 4.352-1.953 4.352-4.352 0-2.4-1.953-4.352-4.352-4.352A4.356 4.356 0 005.648 10zm1.172 0A3.183 3.183 0 0110 6.82 3.183 3.183 0 0113.18 10 3.183 3.183 0 0110 13.18 3.183 3.183 0 016.82 10z' fill='%23A2AAB1'/%3E%3C/svg%3E" />
         <Text fontSize="md">
@@ -121,12 +124,23 @@ const DashboardMain = () => {
         </Text>
         <CloseButton display={{ base: 'flex', md: 'none' }} onClick={onClose} />
       </Flex>
+      
+      <Divider mt="10px"/>
+      <Divider mt="300px"/>
+      <Flex  h="16" cursor="pointer"  _hover={{backgroundColor:"#d7f3e3"}} borderRadius="5px" pl="10px" alignItems="center" mx="5" gap="10px">
+       <Box w="40px" textAlign="center" color="white" fontWeight="600" h="33" fontSize="20px" borderRadius="50%" bgColor="orange.500">K</Box>
+        <Text fontSize="md">
+         {logout ? <Button>Logout</Button> : <Box onClick={()=>setlogout(true)}>"Kaustubh B."</Box>}
+        </Text>
+        <CloseButton display={{ base: 'flex', md: 'none' }} onClick={onClose} />
+      </Flex>
 
-      <Divider />
+
+ 
 
         </Box>
         <Box w="80%" border="1px solid" p="10px" borderColor="gray.300" ml="10px">
-        {time ? <Time/> : projects ? <OuterLayout/> : client ? <ClintsMainPage/> : setting ? <Setting/> : <Home/> }
+        {time ? <Time/> : projects ? <Product/> : client ? <ClintsMainPage/> : setting ? <Setting/> : <Home/> }
         </Box>
     </Box>
   )

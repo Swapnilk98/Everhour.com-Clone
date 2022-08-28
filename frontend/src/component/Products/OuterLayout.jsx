@@ -11,7 +11,7 @@ import ProjectCreation from './ProjectCreation'
 const OuterLayout = () => {
     const [summary, setSummary] = useState(false)
     const [list, setList] = useState(false)
-    const [board, setboard] = useState(false)
+    const [board, setboard] = useState(true)
     const [activity, setActivity] = useState(false)
     const { isOpen, onOpen, onClose } = useDisclosure();
     const { isOpen: noBudgetisOpen,onOpen: noBudgetonOpen,onClose: noBudgetonClose,} = useDisclosure();
@@ -42,18 +42,12 @@ const OuterLayout = () => {
         setboard(true)
     }
   return (
-    <Box display="flex" mt="10px">
-      {/* <Box width="300px" border="1px solid" borderColor="gray.200">
-        <SimpleSidebar/>
-      </Box> */}
-   
+    <Box mt="10px">
     <Box>
         {/* //Top Navbar */}
         <Box
           h="90px"
           w="1400px"
-          border="1px solid"
-          borderColor="gray.200"
           mb="-10px"
           borderBottom="none"
         >
@@ -139,16 +133,16 @@ const OuterLayout = () => {
           </Box>
 
           <Box display="flex" fontSize="15px" mt="13px" pl="30px" mb="-30px">
-            <Box onClick={HandleSummary} cursor="pointer" mr="15px" ml="10px">
+            <Box onClick={HandleSummary} borderBottom="3px solid white" borderBottomColor={summary ? "green.300" :""}  cursor="pointer" mr="15px" ml="10px">
               Summary
             </Box>
-            <Box onClick={HandleList} cursor="pointer" mr="15px" ml="10px">
+            <Box onClick={HandleList} borderBottom="3px solid white" borderBottomColor={list ? "green.300" :""}   cursor="pointer" mr="15px" ml="10px">
               List
             </Box>
             <Box
-              borderBottom="3px solid"
+             borderBottom="3px solid white"
               pb="10px"
-              borderBottomColor="green.300"
+              borderBottomColor={board ? "green.300" :""} 
               cursor="pointer"
               mr="15px"
               ml="10px"
@@ -156,7 +150,7 @@ const OuterLayout = () => {
             >
               Board
             </Box>
-            <Box onClick={HandleActivity} cursor="pointer" mr="15px" ml="10px">
+            <Box onClick={HandleActivity} borderBottom="3px solid white" borderBottomColor={activity ? "green.300" :""}  cursor="pointer" mr="15px" ml="10px">
               Activity
             </Box>
           </Box>

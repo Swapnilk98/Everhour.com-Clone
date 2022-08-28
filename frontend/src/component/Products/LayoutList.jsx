@@ -56,7 +56,7 @@ GetTodos()
 
 
   return (
-    <Box mt="10px" p="30px" border="1px solid" borderColor="gray.200" h="88vh" overflow="scroll">
+    <Box mt="10px" p="30px" borderTop="1px solid" borderColor="gray.200" h="88vh" overflow="scroll">
       {/* Todo */}
       <Box mb="30px">
         <Box display="flex" alignItems="center" >
