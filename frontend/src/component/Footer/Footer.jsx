@@ -1,4 +1,3 @@
-import { ReactNode } from "react";
 import {
   Box,
   Container,
@@ -12,23 +11,15 @@ import {
 } from "@chakra-ui/react";
 import { FaTwitter, FaYoutube, FaLinkedin, FaFacebook } from "react-icons/fa";
 
-const ListHeader = ({ children }: { children: ReactNode }) => {
+const ListHeader = ({ children }) => {
   return (
-    <Text fontWeight={"500"} fontSize={"md"} mb={2}>
+    <Text fontWeight={"500"} fontSize={"md"} mb={2} color={"whiteAlpha.700"}>
       {children}
     </Text>
   );
 };
 
-const SocialButton = ({
-  children,
-  label,
-  href,
-}: {
-  children: ReactNode,
-  label: string,
-  href: string,
-}) => {
+const SocialButton = ({ children, label, href }) => {
   return (
     <chakra.button
       bg={useColorModeValue("blackAlpha.100", "whiteAlpha.100")}
@@ -58,8 +49,15 @@ export default function LargeWithAppLinksAndSocial() {
       bg={useColorModeValue("gray.50", "gray.900")}
       color={useColorModeValue("gray.700", "gray.200")}
     >
-      <Container as={Stack} maxW={"8xl"} py={10} bg={"black"} color={"white"}>
-        <SimpleGrid columns={{ base: 1, sm: 2, md: 6 }} spacing={1}>
+      <Container
+        as={Stack}
+        maxW={"8xl"}
+        py={10}
+        bg={"black"}
+        color={"white"}
+        justifyContent={"space-around"}
+      >
+        <SimpleGrid columns={{ base: 2, sm: 2, md: 6 }} spacing={4}>
           <Stack align={"flex-start"}>
             <ListHeader>Company</ListHeader>
             <Link href={"#"}>About Us</Link>
@@ -84,8 +82,8 @@ export default function LargeWithAppLinksAndSocial() {
             <Link href={"#"}>Expenses</Link>
             <Link href={"#"}>Reporting</Link>
             <Link href={"#"}>Invoicing</Link>
-            <Link href={"#"}>Time card calculator</Link>
-            <Link href={"#"}>Weekly timesheet template</Link>
+            {/* <Link href={"#"}>Time card calculator</Link>
+            <Link href={"#"}>Weekly timesheet template</Link> */}
             <Link href={"#"}>Invoice generator</Link>
           </Stack>
           <Stack align={"flex-start"}>
@@ -112,13 +110,13 @@ export default function LargeWithAppLinksAndSocial() {
             <Link href={"#"}>Time clock app</Link>
             <Link href={"#"}>Attendance tracker</Link>
             <Link href={"#"}>Work hours tracker</Link>
-            <Link href={"#"}>Employee time tracking</Link>
+            <Link href={"#"}>Employee tracking</Link>
           </Stack>
           <Stack align={"flex-start"}>
             <ListHeader>Download</ListHeader>
             <Link href={"#"}>Browser extension</Link>
-            <Link href={"#"}>Chrome time track extension</Link>
-            <Link href={"#"}>Time track with screenshots</Link>
+            <Link href={"#"}>Chrome time track </Link>
+            <Link href={"#"}>Time track with </Link>
             <Link href={"#"}>Iphone app</Link>
           </Stack>
         </SimpleGrid>
@@ -135,7 +133,7 @@ export default function LargeWithAppLinksAndSocial() {
           py={4}
           direction={{ base: "column", md: "row" }}
           spacing={4}
-          justify={{ md: "space-between" }}
+          justify={{ md: "space-around" }}
           align={{ md: "center" }}
         >
           <Text>©2022 Everhour Terms | Privacy | Cookies | Sitemap</Text>

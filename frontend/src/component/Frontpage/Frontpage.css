@@ -43,6 +43,7 @@ font-size: 24px;
     /* border: 1px solid green; */
     height: auto;
     width: 100%;
+    text-align: center;
     padding-top: 15px;
     color: #767676;
     font-family: 'geomanist-regular',
@@ -87,6 +88,7 @@ font-size: 24px;
         text-align: center;
         padding-top: 30px;
         display: flex;
+        padding-bottom: 120px;
 }
 .google a{
     padding-bottom: 15px;
@@ -102,7 +104,8 @@ font-size: 24px;
     /* border: 1px solid green; */
     height: auto;
     width: 100%;
-    padding-top: 5px;
+    padding-top: 85px;
+    padding-bottom: 20px;
     justify-content: center;
     text-align: center;
     line-height: 50px;
