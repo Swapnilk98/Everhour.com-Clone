@@ -5,7 +5,9 @@ const cors=require("cors")
 
 const connection = require('./connection/connect');
 const PORT = process.env.PORT;
-
+const Todologger=require("./Routes/todo.route")
+const TodoInpro=require("./Routes/todoInprogress.route")
+const TodoComp=require("./Routes/todocomp.route")
 const AuthRouter = require('./routes/auth.route');
 const clientController = require('./routes/client.route');
 const timeController = require('./routes/timesheet.route');

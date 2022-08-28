@@ -1,6 +1,7 @@
 import { Box, Button, CloseButton, Divider, Flex, Image, Text, useDisclosure } from '@chakra-ui/react'
 import React from 'react'
 import { useState } from 'react'
+import { useNavigate } from 'react-router'
 import { ClintsMainPage } from '../Clints/ClintsMainPage'
 import { Home } from '../HomeProjects/Home'
 import Setting from '../Payment/Setting'
@@ -54,6 +55,15 @@ const DashboardMain = () => {
         setSetting(true)
     }
 
+
+    let userName=localStorage.getItem("userName")
+    const navigate=useNavigate()
+const handdlelogout=()=>
+{
+ 
+localStorage.removeItem("token")
+navigate("/")
+}
   return (
     <Box display="flex" m="auto" ml="5%" minH="100vh">
         <Box w="13%" border="1px solid" borderColor="gray.300">
@@ -130,7 +140,7 @@ const DashboardMain = () => {
       <Flex  h="16" cursor="pointer"  _hover={{backgroundColor:"#d7f3e3"}} borderRadius="5px" pl="10px" alignItems="center" mx="5" gap="10px">
        <Box w="40px" textAlign="center" color="white" fontWeight="600" h="33" fontSize="20px" borderRadius="50%" bgColor="orange.500">K</Box>
         <Text fontSize="md">
-         {logout ? <Button>Logout</Button> : <Box onClick={()=>setlogout(true)}>"Kaustubh B."</Box>}
+         {logout ? <Button onClick={handdlelogout}>Logout</Button> : <Box onClick={()=>setlogout(true)} >{userName}</Box>}
         </Text>
         <CloseButton display={{ base: 'flex', md: 'none' }} onClick={onClose} />
       </Flex>

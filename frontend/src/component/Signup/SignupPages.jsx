@@ -13,6 +13,7 @@ import {
   Textarea,
 } from "@chakra-ui/react";
 import React, { useState } from "react";
+import { Navigate, useNavigate } from "react-router";
 import "./signup.css";
 const SignupPages = () => {
   const email = localStorage.getItem("sign_email");
@@ -21,7 +22,9 @@ const SignupPages = () => {
   const [two, setTwo] = useState({});
   const [three, setThree] = useState({});
   const [four, setFour] = useState({});
+  const navigate=useNavigate()
   const submitData = () => {
+   
     const payload = {
       email,
       ...one,
@@ -29,7 +32,7 @@ const SignupPages = () => {
       ...three,
       ...four,
     };
-    console.log(payload)
+
     fetch("http://localhost:8000/signup", {
       method: "POST",
       headers: {
@@ -39,6 +42,9 @@ const SignupPages = () => {
     })
       .then((res) => res.json())
       .then((d) => console.log(d));
+localStorage.setItem("userName",payload.name)
+      navigate("/dashboard")
+
   };
   return (
     <Box className="signupPage">

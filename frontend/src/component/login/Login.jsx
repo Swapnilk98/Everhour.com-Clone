@@ -13,36 +13,46 @@ import "../Signup/signup.css";
 import { FcGoogle } from "react-icons/fc";
 import { useState } from "react";
 import { useNavigate } from "react-router";
+import WithSubnavigation from "../Navbar/Navbar";
+import LargeWithAppLinksAndSocial from "../Footer/Footer";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
 const navigate=useNavigate()
   const login = () => {
-    let token=JSON.parse(localStorage.getItem("login_message")).token
-if(token!=="")
+    
+
+let token=localStorage.getItem("login_message")
+if(token)
 {
 navigate("/dashboard")
 }
-else{
-
-
-
-    const payload = {
-      email,
-      pass,
-    };
-    fetch("http://localhost:8000/login", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(payload),
-    })
-      .then((res) => res.json())
-      .then((d) => localStorage.setItem("login_message", JSON.stringify(d)));
-  }
+else
+{
+  const payload = {
+    email,
+    pass,
   };
+  fetch("http://localhost:8000/login", {
+    method: "POST",
+    headers: {
+      "content-type": "application/json",
+    },
+    body: JSON.stringify(payload),
+  })
+    .then((res) => res.json())
+    .then((d) => localStorage.setItem("login_message", d.token));
+};
+}
+
+
+
+
+    
   return (
+    <>
+    <WithSubnavigation />
+    
     <Box className="main_login">
       <Box className="page1_top">
         <Box className="background">
@@ -195,6 +205,8 @@ else{
         ></img>
       </Box>
     </Box>
+    <LargeWithAppLinksAndSocial />
+    </>
   );
 };
 

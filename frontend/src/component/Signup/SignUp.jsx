@@ -8,6 +8,8 @@ import { Button, Input } from "@chakra-ui/react";
 import { FcGoogle } from "react-icons/fc";
 import { useState } from "react";
 import {  useNavigate } from "react-router";
+import WithSubnavigation from "../Navbar/Navbar";
+import LargeWithAppLinksAndSocial from "../Footer/Footer";
 
 const SignUp = () => {
   const [email, setEmail] = useState("");
@@ -20,6 +22,8 @@ const navigate=useNavigate()
   };
 
   return (
+    <>
+    <WithSubnavigation />
     <div className="main_signup">
       <div className="page1_top">
         <div className="background">
@@ -28,6 +32,7 @@ const navigate=useNavigate()
           <div className="background_right"></div>
         </div>
         <div className="page1_content">
+          
           <div className="top">
             <h1>Make your team more productive with Everhour</h1>
             <div className="subtitle">
@@ -136,6 +141,8 @@ const navigate=useNavigate()
         </div>
       </div>
     </div>
+    <LargeWithAppLinksAndSocial />
+    </>
   );
 };
 

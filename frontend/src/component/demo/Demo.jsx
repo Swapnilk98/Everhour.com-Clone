@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   Box,
   Button,
@@ -10,11 +10,16 @@ import {
   RadioGroup,
   Stack,
   UnorderedList,
-} from '@chakra-ui/react';
-import '../Signup/signup.css';
-import { FcGoogle } from 'react-icons/fc';
+} from "@chakra-ui/react";
+import "../Signup/signup.css";
+import { FcGoogle } from "react-icons/fc";
+import WithSubnavigation from "../Navbar/Navbar";
+import LargeWithAppLinksAndSocial from "../Footer/Footer";
 const Demo = () => {
   return (
+    <>
+    <WithSubnavigation />
+    
     <Box className="main_login">
       <Box className="page1_top">
         <Box className="background">
@@ -152,13 +157,15 @@ const Demo = () => {
             leftIcon={<FcGoogle fontSize="1.5rem" />}
           >
             <Box className="login_endbtn" color="gray">
-              {' '}
+              {" "}
               Or Sign up with google account
             </Box>
           </Button>
         </Box>
       </Box>
     </Box>
+    <LargeWithAppLinksAndSocial />
+    </>
   );
 };
 

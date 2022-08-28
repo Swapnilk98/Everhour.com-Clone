@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   Accordion,
   AccordionButton,
@@ -12,15 +12,19 @@ import {
   Select,
   Stack,
   UnorderedList,
-} from '@chakra-ui/react';
+} from "@chakra-ui/react";
 // import { MdCheckCircle } from '@chakra-ui/icons';
-import '../Signup/signup.css';
-import { FcGoogle } from 'react-icons/fc';
-import { useState } from 'react';
+import "../Signup/signup.css";
+import { FcGoogle } from "react-icons/fc";
+import { useState } from "react";
+import LargeWithAppLinksAndSocial from "../Footer/Footer";
+import WithSubnavigation from "../Navbar/Navbar";
 const Pricing = () => {
   const [monthyear, setMonthyear] = useState(false);
 
   return (
+    <>
+    <WithSubnavigation />
     <Box className="main_login">
       <Box className="page1_top">
         <Box className="background">
@@ -87,16 +91,16 @@ const Pricing = () => {
           </Box>
           <Box marginBottom="2rem">
             <Box className="pricing_ammount">
-              <span style={{ fontSize: '20px' }}>&#8377;</span>{' '}
-              {monthyear ? 799 : 679}{' '}
+              <span style={{ fontSize: "20px" }}>&#8377;</span>{" "}
+              {monthyear ? 799 : 679}{" "}
               <span
                 style={{
-                  fontSize: '20px',
-                  marginLeft: '-1rem',
-                  fontWeight: '200',
+                  fontSize: "20px",
+                  marginLeft: "-1rem",
+                  fontWeight: "200",
                 }}
               >
-                {monthyear ? '.16' : '.02'}
+                {monthyear ? ".16" : ".02"}
               </span>
             </Box>
             <Box
@@ -104,7 +108,7 @@ const Pricing = () => {
               colorSchema="gray.500"
               fontWeight="400"
             >
-              / user / month, starting at{' '}
+              / user / month, starting at{" "}
               <Box display="inline-block" color="gray">
                 5 users
               </Box>
@@ -136,7 +140,7 @@ const Pricing = () => {
       </Box>
       <Box textAlign="center" marginBottom="5rem">
         <Box display="inline-block" color="gray.500">
-          {' '}
+          {" "}
           Currency
         </Box>
 
@@ -381,7 +385,7 @@ const Pricing = () => {
                 leftIcon={<FcGoogle fontSize="1.5rem" />}
               >
                 <Box className="login_endbtn" color="gray">
-                  {' '}
+                  {" "}
                   Or Sign up with google account
                 </Box>
               </Button>
@@ -400,6 +404,8 @@ const Pricing = () => {
         </Box>
       </Box>
     </Box>
+    <LargeWithAppLinksAndSocial />
+    </>
   );
 };
 

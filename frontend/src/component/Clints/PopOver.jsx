@@ -40,15 +40,16 @@ export const PopOver = ({onClick}) => {
                 borderBottom={"1px solid"}
                 borderColor="gray.300"
                 p="2"
+                cursor="pointer"
               >
                 <Text mt="2">
                   <MdModeEditOutline />{" "}
                 </Text>
-                <Text>Edit Clients</Text>
+                <Text >Edit Clients</Text>
               </Flex>
-              <Flex p="2">
+              <Flex p="2" cursor="pointer">
                 <DeleteIcon color="#ed797b" mt="1" />{" "}
-                <Text color={"#ed797b"} onClick={onClick}>
+                <Text color={"#ed797b"} onClick={onClick} >
                   {" "}
                   Delete
                 </Text>

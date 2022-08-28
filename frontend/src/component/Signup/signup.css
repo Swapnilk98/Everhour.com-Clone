@@ -131,6 +131,7 @@
      box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
      cursor: pointer;
      overflow: hidden;
+     padding-top: 2rem;
  }
  .grids>div:hover{
      box-shadow: rgba(0, .5, 0, 0.20) 1.95px 1.95px 2.6px;
@@ -139,7 +140,7 @@
     position: absolute;
     bottom: 10px;
     right: 5px;
-    color: blue;
+    color: #5595db;
  }
  .signupPage{
      margin-top: 3rem;
@@ -222,7 +223,8 @@
    position: absolute;
    bottom: 10px;
    right: 5px;
-   color: blue;
+   color: #5595db;
+   
 }
 .signupPage{
     margin-top: 3rem;
@@ -280,6 +282,8 @@
     text-decoration: none;
 }
 .pricing_box{
+    box-shadow: rgba(0, .5, 0, 0.20) 1.95px 1.95px 2.6px;
+    margin: auto;
     width:300px;
         padding:2rem;
         padding-top: none;
