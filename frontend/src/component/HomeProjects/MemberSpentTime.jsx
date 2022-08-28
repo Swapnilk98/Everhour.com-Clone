@@ -15,7 +15,7 @@ import { Box, Flex, PopoverTrigger,
     import { FaSquare } from 'react-icons/fa';
 import React, { useState } from 'react'
 
-export const ProjectWithSpentTime = () => {
+export const MemberSpentTime = () => {
     const [Filtervalue, setValue] = useState('Active')
     const [GroupByValue, setGroupByValue] = useState('None')
 
@@ -33,7 +33,7 @@ export const ProjectWithSpentTime = () => {
   <Button  w="180px"h="6"  border="none" variant='outline' mt="-3" justifyContent={"space-between"} >
     <Flex gap="10px">
     <Text fontSize={"12px"}  color={"#a2aab1"}>Group By:</Text>
- <Text fontSize={"14px"}>{GroupByValue}</Text>
+ <Text fontSize={"14px"} >{GroupByValue}</Text>
     </Flex>
     <ChevronDownIcon  />
  </Button>
@@ -53,36 +53,6 @@ export const ProjectWithSpentTime = () => {
   </PopoverContent>
 </Popover>
   </Box>
-
-  <Box mt="2">
-  <Popover>
-  <PopoverTrigger>
-  <Button  w="160px"h="6"  border="none" variant='outline' mt="-3" justifyContent={"space-between"} >
-    <Stack >
-    <Flex gap="10px">
-    <Text fontSize={"12px"}  color={"#a2aab1"}>Project:</Text>
- <Text fontSize={"14px"}>{projects}</Text>
-    </Flex>
-    </Stack>
-    <ChevronDownIcon  />
- </Button>
-    
-  </PopoverTrigger>
-  <PopoverContent>
-    <PopoverArrow />
-    <PopoverCloseButton />
-    <RadioGroup onChange={setprojects} value={projects}>
-      <Stack>
-        <Radio value='All'>All</Radio>
-        <Radio value='Active'>Active</Radio>
-        <Radio value='Favorites'>Archived</Radio>
-      </Stack>
-    </RadioGroup>
-
-  </PopoverContent>
-</Popover>
-</Box>
-
 
   <Box mt="2">
   <Popover>
@@ -159,7 +129,7 @@ export const ProjectWithSpentTime = () => {
 <Box>
   <Flex>
   <Text mt="3" ml="20%">Smooth-Dock</Text>
-  <Box mt="4" w="60%" h="20px" bgColor={"#d2e9d6"}><Text textAlign={"right"}></Text></Box>
+  <Box mt="4" w="60%" h="25px" bgColor={"#d2e9d6"}><Text textAlign={"right"}></Text></Box>
   </Flex>
  
 </Box>
