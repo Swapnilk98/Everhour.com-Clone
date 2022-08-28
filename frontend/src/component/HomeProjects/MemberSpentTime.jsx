@@ -15,7 +15,7 @@ import { Box, Flex, PopoverTrigger,
     import { FaSquare } from 'react-icons/fa';
 import React, { useState } from 'react'
 
-export const ProjectWithSpentTime = () => {
+export const MemberSpentTime = () => {
     const [Filtervalue, setValue] = useState('Active')
     const [GroupByValue, setGroupByValue] = useState('None')
 

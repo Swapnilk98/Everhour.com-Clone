@@ -4,6 +4,7 @@ import { Box, Flex,Text } from "@chakra-ui/react";
 
 import React from "react";
 import SimpleSidebar from "../SideBar/SideBar";
+import { MemberSpentTime } from "./MemberSpentTime";
 import { ProjectWithSpentTime } from "./ProjectWithSpentTime";
 import { TeamTimeSheet } from "./TeamTimeSheet";
 
@@ -24,6 +25,10 @@ export const Home = () => {
     <ProjectWithSpentTime />
     </Box>
 
+    <Box w="100%" p="10">
+    <Text fontSize={"20px "}  textAlign={"center"} mb="4">Members with the most spent time</Text>
+    <MemberSpentTime />
+    </Box>
     </Box>
   );
 };
