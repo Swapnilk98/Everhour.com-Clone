@@ -11,7 +11,7 @@ import ProjectCreation from './ProjectCreation'
 const OuterLayout = () => {
     const [summary, setSummary] = useState(false)
     const [list, setList] = useState(false)
-    const [board, setboard] = useState(false)
+    const [board, setboard] = useState(true)
     const [activity, setActivity] = useState(false)
     const { isOpen, onOpen, onClose } = useDisclosure();
     const { isOpen: noBudgetisOpen,onOpen: noBudgetonOpen,onClose: noBudgetonClose,} = useDisclosure();
