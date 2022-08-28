@@ -26,7 +26,7 @@ export const ProjectWithSpentTime = () => {
   return (
     <Box h="160px" border={"1px solid"} borderColor="gray.300">
 <Box  h="40px" borderBottom={"1px dotted"} borderColor="gray.300">
-<Flex gap="10px" m="auto" justifyContent={"space-around"}>
+<Flex gap="10px" m="auto" justifyContent={"space-around"} w="70%">
 <Box mt="2">
   <Popover>
   <PopoverTrigger>
@@ -159,7 +159,7 @@ export const ProjectWithSpentTime = () => {
 <Box>
   <Flex>
   <Text mt="3" ml="20%">Smooth-Dock</Text>
-  <Box mt="4" w="60%" h="25px" bgColor={"#d2e9d6"}><Text textAlign={"right"}></Text></Box>
+  <Box mt="4" w="60%" h="20px" bgColor={"#d2e9d6"}><Text textAlign={"right"}></Text></Box>
   </Flex>
  
 </Box>
