@@ -9,9 +9,9 @@ import OuterLayout from '../Products/OuterLayout'
 import Product from '../Products/Product'
 import SimpleSidebar from '../SideBar/SideBar'
 import { Time } from '../Time/Time'
-
+import "./dashboard.css"
 const DashboardMain = () => {
-    const [home, sethome] = useState(false)
+    const [home, sethome] = useState(true)
     const [time, settime] = useState(false)
     const [projects, setprojects] = useState(false)
     const [client, setclient] = useState(false)
@@ -149,7 +149,7 @@ navigate("/")
  
 
         </Box>
-        <Box w="80%" border="1px solid" p="10px" borderColor="gray.300" ml="10px">
+        <Box overflow="scroll" className='AAA' maxH="100vh" w="80%" border="1px solid" p="10px" borderColor="gray.300" ml="10px">
         {time ? <Time/> : projects ? <Product/> : client ? <ClintsMainPage/> : setting ? <Setting/> : <Home/> }
         </Box>
     </Box>

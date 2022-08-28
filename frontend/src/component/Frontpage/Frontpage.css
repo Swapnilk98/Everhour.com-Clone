@@ -1,7 +1,6 @@
 .container{
     height:auto;
     width: 100%;
-    /* border: 1px solid blue */
 }
 
 .star{
@@ -127,5 +126,9 @@ font-size: 24px;
         font-size: 22px;
         font-weight: 400;
         line-height: 1.44;
+
+}
+
+@media all and (min-width: 401px) and (max-width: 720px){
 
 }

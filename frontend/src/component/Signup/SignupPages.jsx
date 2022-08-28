@@ -43,7 +43,7 @@ const SignupPages = () => {
       .then((res) => res.json())
       .then((d) => console.log(d));
 localStorage.setItem("userName",payload.name)
-      navigate("/dashboard")
+      navigate("/login")
 
   };
   return (

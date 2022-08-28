@@ -98,8 +98,8 @@ const handdleReport=()=>
  }
 
   return (
-    <Box  h="50px" mt={2}  border="1px solid" borderColor={"gray.300"} borderRadius="5px" m="auto" w="91%">
-      <Flex h="50px">
+    <Box  h="60px" mt={2}   border="1px solid" borderColor={"gray.300"} borderRadius="5px" m="auto" w="84%">
+      <Flex h="60px">
         <Box>
           <Stack spacing={4}   width={"500px"}>
             <InputGroup>
@@ -112,6 +112,7 @@ const handdleReport=()=>
                 mt="2"
                 variant="unstyled"
                 textAlign={"left"}
+                fontSize="15px"
                 size="lg"
                 color="gray.300"
                 width={"500px"}
@@ -160,11 +161,12 @@ const handdleReport=()=>
         >
           <FormControl
             display="flex"
-            fontSize={"11px"}
             alignItems="center"
+            mt="-7px"
+            fontSize={"11px"}
             color={"gray.300"}
           >
-            <FormLabel fontSize={"14px"} htmlFor="email-alerts" ml="2" >
+            <FormLabel fontSize={"12px"}  pt="10px" htmlFor="email-alerts" ml="2" >
               Time Period
             </FormLabel>
             <Switch id="email-alerts" />
@@ -174,15 +176,18 @@ const handdleReport=()=>
            type={"number"}   name="timeHour"
            onChange={handleChange}
             variant="unstyled"
-            textAlign={"center"}
-            color={"gray.400"}
+            textAlign={"left"}
+            pl="10px"
+            color={"gray.200"}
+            fontSize="13px"
+            mt="-20px"
             placeholder="Ex.2h"
           />
         </Box>
 
-        <Box width="150px"  borderLeft={"1px solid"}
+        <Box width="150px" pl="11px"  borderLeft={"1px solid"}
           
-          borderRight={"1px solid"} 
+          // borderRight={"1px solid"} 
           borderColor={"gray.300"}>
           <Text fontSize={"14px"} mb="0" color="gray.300" ml="2" >
             Date
@@ -205,6 +210,7 @@ const handdleReport=()=>
             h="99%"
             w={"100%"}
             colorScheme="whatsapp"
+            ml="20px"
           >
            Report Time
           </Button>

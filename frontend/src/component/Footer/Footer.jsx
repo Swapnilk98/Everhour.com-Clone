@@ -46,12 +46,13 @@ const SocialButton = ({ children, label, href }) => {
 export default function LargeWithAppLinksAndSocial() {
   return (
     <Box
+    width="100%"
       bg={useColorModeValue("gray.50", "gray.900")}
       color={useColorModeValue("gray.700", "gray.200")}
     >
       <Container
         as={Stack}
-        maxW={"8xl"}
+        maxW={"15xl"}
         py={10}
         bg={"black"}
         color={"white"}

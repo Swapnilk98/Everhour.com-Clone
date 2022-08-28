@@ -4,7 +4,6 @@ import DashboardMain from './DashBoardMain/DashboardMain';
 import Demo from './demo/Demo';
 import Landing from './Landing';
 import Login from './login/Login';
-import Navbar from './Navbar/Navbar';
 import Confirmation from './Payment/Confirmation';
 import Otp from './Payment/Otp';
 import Pricing from './pricing/Pricing';

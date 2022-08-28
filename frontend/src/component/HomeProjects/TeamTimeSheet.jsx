@@ -10,6 +10,7 @@ import {
 import React from "react";
 
 export const TeamTimeSheet = () => {
+  let userName=localStorage.getItem("userName")
   return (
     <Box h="120px" border={"1px solid"} borderColor="gray.300">
       <Box borderBottom="1px solid" h="50%">
@@ -74,7 +75,7 @@ export const TeamTimeSheet = () => {
         <Stack direction="row" h="100%">
           <Box borderRight="1px solid" color={"gray.500"} w="33%" >
             <Box borderBottom="1px solid" borderColor={"gray.300"} h="50%">
-              <Text ml="4">Rathod Prabhu</Text>
+              <Text ml="4">{userName}</Text>
             </Box>
             <Box>
               <Text ml="4" mt="2">
