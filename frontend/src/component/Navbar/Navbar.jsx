@@ -24,9 +24,11 @@ import {
   ChevronRightIcon,
 } from '@chakra-ui/icons';
 
+import { Link as ReachLink, useNavigate } from "react-router-dom"
+
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
-
+const navigate=useNavigate()
   return (
     <Box>
       <Flex
@@ -52,6 +54,7 @@ export default function WithSubnavigation() {
           />
         </Flex>
         <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
+      <Link as={ReachLink} to={"/"} >
           <Text
             textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
             fontFamily={'geomanist-regular,sans-serif'}
@@ -67,7 +70,7 @@ export default function WithSubnavigation() {
               alt=""
             />
           </Text>
-
+          </Link>
           <Flex
             display={{ base: 'none', md: 'flex' }}
             ml={1}
@@ -93,7 +96,7 @@ export default function WithSubnavigation() {
             fontWeight={500}
             fontFamily={'geomanist-regular,sans-serif'}
             variant={'link'}
-            href={'#'}
+            onClick={()=>{navigate("/login")}}
           >
             Log in
           </Button>
@@ -108,6 +111,7 @@ export default function WithSubnavigation() {
             _hover={{
               bg: '#57bb71',
             }}
+            onClick={()=>{navigate("/signup")}}
           >
             Sign Up
           </Button>
@@ -133,8 +137,10 @@ const DesktopNav = () => {
           <Popover trigger={'hover'} placement={'bottom-start'}>
             <PopoverTrigger>
               <Link
+              as={ReachLink}
+              to={navItem.href ?? '#'}
                 p={2}
-                href={navItem.href ?? '#'}
+                
                 fontSize={'md'}
                 fontFamily={'geomanist-regular,sans-serif'}
                 fontWeight={500}
@@ -174,7 +180,8 @@ const DesktopNav = () => {
 const DesktopSubNav = ({ label, href, subLabel }) => {
   return (
     <Link
-      href={href}
+    as={ReachLink}
+    to={href?? '#'}
       role={'group'}
       display={'block'}
       p={2}
@@ -265,7 +272,7 @@ const MobileNavItem = ({ label, children, href }) => {
         >
           {children &&
             children.map((child) => (
-              <Link key={child.label} py={2} href={child.href}>
+              <Link  key={child.label} py={2} to={child.href}>
                 {child.label}
               </Link>
             ))}
@@ -278,6 +285,7 @@ const MobileNavItem = ({ label, children, href }) => {
 const NAV_ITEMS = [
   {
     label: 'Everhour',
+    href:"/"
   },
   {
     label: 'Integrations',
@@ -286,21 +294,21 @@ const NAV_ITEMS = [
       {
         label: 'Job Board',
 
-        href: '#',
+        href: 'Job Board',
       },
       {
         label: 'Freelance Projects',
 
-        href: '#',
+        href: 'Freelance Projects',
       },
     ],
   },
   {
     label: 'Pricing',
-    href: '#',
+    href: 'Pricing',
   },
   {
     label: 'Demo',
-    href: '#',
+    href: 'Demo',
   },
 ];

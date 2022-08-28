@@ -11,11 +11,11 @@ import {
   Select,
   Switch,
   Textarea,
-} from '@chakra-ui/react';
-import React, { useState } from 'react';
-import './signup.css';
+} from "@chakra-ui/react";
+import React, { useState } from "react";
+import "./signup.css";
 const SignupPages = () => {
-  const email = localStorage.getItem('sign_email');
+  const email = localStorage.getItem("sign_email");
   const [selectedStage, setSelectedStage] = useState(1);
   const [one, setOne] = useState({});
   const [two, setTwo] = useState({});
@@ -29,10 +29,11 @@ const SignupPages = () => {
       ...three,
       ...four,
     };
-    fetch('http://localhost:8000/signup', {
-      method: 'POST',
+    console.log(payload)
+    fetch("http://localhost:8000/signup", {
+      method: "POST",
       headers: {
-        'content-type': 'application/json',
+        "content-type": "application/json",
       },
       body: JSON.stringify(payload),
     })
@@ -81,7 +82,7 @@ export default SignupPages;
 
 const StageOne = ({ selectedStage, setSelectedStage, one, setOne }) => {
   const handleChange = (e) => {
-    if (e.target.name === 'radio') {
+    if (e.target.name === "radio") {
       setOne({
         ...one,
         terms: e.target.value,
@@ -174,7 +175,7 @@ const StageOne = ({ selectedStage, setSelectedStage, one, setOne }) => {
 
 const StageTwo = ({ selectedStage, setSelectedStage, two, setTwo }) => {
   const handleChange = (e) => {
-    if (e.target.name === 'radio') {
+    if (e.target.name === "radio") {
       setTwo({
         ...two,
         terms: e.target.value,
@@ -368,7 +369,7 @@ const StageFour = ({
   submutData,
 }) => {
   const handleChange = (e) => {
-    if (e.target.name === 'radio') {
+    if (e.target.name === "radio") {
       setFour({
         ...four,
         terms: e.target.value,

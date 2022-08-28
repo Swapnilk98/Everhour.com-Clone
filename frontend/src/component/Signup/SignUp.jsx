@@ -1,19 +1,21 @@
-import React from 'react';
-import './signup.css';
-import { Button, Input } from '@chakra-ui/react';
+import React from "react";
+import "./signup.css";
+import { Button, Input } from "@chakra-ui/react";
 // import {
 //   BsFillExclamationSquareFill,
 //   BsFillEnvelopeFill,
 // } from 'react-icons/bs';
-import { FcGoogle } from 'react-icons/fc';
-import { useState } from 'react';
+import { FcGoogle } from "react-icons/fc";
+import { useState } from "react";
+import {  useNavigate } from "react-router";
 
 const SignUp = () => {
-  const [email, setEmail] = useState('');
-
+  const [email, setEmail] = useState("");
+const navigate=useNavigate()
   const submitEmail = () => {
-    if (email !== '') {
-      localStorage.setItem('sign_email', email);
+    if (email !== "") {
+      localStorage.setItem("sign_email", email);
+      navigate("/signupage")
     }
   };
 
@@ -41,13 +43,13 @@ const SignUp = () => {
               padding="1.5rem"
               leftIcon={<FcGoogle fontSize="2rem" />}
             >
-              <span style={{ margin: '0px auto 0px auto', color: 'gray' }}>
-                {' '}
+              <span style={{ margin: "0px auto 0px auto", color: "gray" }}>
+                {" "}
                 Sign up with google
               </span>
             </Button>
           </div>
-          <div style={{ margin: '1rem' }}>or</div>
+          <div style={{ margin: "1rem" }}>or</div>
           <div>
             <Input
               placeholder="work Email ..."
@@ -58,8 +60,8 @@ const SignUp = () => {
               onChange={(e) => setEmail(e.target.value)}
             />
           </div>
-          <div style={{ marginTop: '1.5rem' }}>
-            <Button colorScheme="green" size="lg" onClick={submitEmail}>
+          <div style={{ marginTop: "1.5rem" }}>
+            <Button colorScheme="green" size="lg" onClick={submitEmail} >
               GET STARTED
             </Button>
           </div>
@@ -127,7 +129,7 @@ const SignUp = () => {
             <span>— Jennifer D. (Source: TrustRadius)</span>
           </div>
         </div>
-        <div style={{ marginTop: '1.5rem' }}>
+        <div style={{ marginTop: "1.5rem" }}>
           <Button colorScheme="teal" size="lg">
             READ MORE
           </Button>

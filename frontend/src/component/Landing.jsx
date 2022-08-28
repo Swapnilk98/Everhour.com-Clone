@@ -9,7 +9,7 @@ import Section from './Section/Section'
 const Landing = () => {
   return (
     <div>
-      <WithSubnavigation />
+     
       <Frontpage />
       <Test />
       <Section />

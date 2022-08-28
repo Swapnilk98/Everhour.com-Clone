@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   Box,
   Button,
@@ -8,28 +8,39 @@ import {
   Radio,
   RadioGroup,
   Stack,
-} from '@chakra-ui/react';
-import '../Signup/signup.css';
-import { FcGoogle } from 'react-icons/fc';
-import { useState } from 'react';
+} from "@chakra-ui/react";
+import "../Signup/signup.css";
+import { FcGoogle } from "react-icons/fc";
+import { useState } from "react";
+import { useNavigate } from "react-router";
 const Login = () => {
-  const [email, setEmail] = useState('');
-  const [pass, setPass] = useState('');
-
+  const [email, setEmail] = useState("");
+  const [pass, setPass] = useState("");
+const navigate=useNavigate()
   const login = () => {
+    let token=JSON.parse(localStorage.getItem("login_message")).token
+if(token!=="")
+{
+navigate("/dashboard")
+}
+else{
+
+
+
     const payload = {
       email,
       pass,
     };
-    fetch('http://localhost:8000/login', {
-      method: 'POST',
+    fetch("http://localhost:8000/login", {
+      method: "POST",
       headers: {
-        'content-type': 'application/json',
+        "content-type": "application/json",
       },
       body: JSON.stringify(payload),
     })
       .then((res) => res.json())
-      .then((d) => localStorage.setItem('login_message', JSON.stringify(d)));
+      .then((d) => localStorage.setItem("login_message", JSON.stringify(d)));
+  }
   };
   return (
     <Box className="main_login">
@@ -48,7 +59,7 @@ const Login = () => {
           Log in to Everhour
         </Box>
         <Box fontSize="1.5rem" color="gray.600">
-          Using the former version of Everhour? Please{' '}
+          Using the former version of Everhour? Please{" "}
           <Box className="right_links">login here</Box>
         </Box>
       </Box>
@@ -61,8 +72,8 @@ const Login = () => {
               colorScheme="white"
               leftIcon={<FcGoogle fontSize="2rem" />}
             >
-              <span style={{ margin: '0px auto 0px auto', color: 'gray' }}>
-                {' '}
+              <span style={{ margin: "0px auto 0px auto", color: "gray" }}>
+                {" "}
                 Sign up with google
               </span>
             </Button>
@@ -89,7 +100,7 @@ const Login = () => {
                 onChange={(e) => setPass(e.target.value)}
               />
             </Box>
-            <Box style={{ marginTop: '1.5rem' }}>
+            <Box style={{ marginTop: "1.5rem" }}>
               <Button
                 colorScheme="green"
                 size="lg"
@@ -107,7 +118,7 @@ const Login = () => {
             <Box className="login_right-content">
               <Box className="right_header">Integration with Todoist</Box>
               <Box>
-                Everhour now integrates with Todoist!{' '}
+                Everhour now integrates with Todoist!{" "}
                 <Box className="right_links">Learn more</Box>
               </Box>
             </Box>
@@ -170,7 +181,7 @@ const Login = () => {
               leftIcon={<FcGoogle fontSize="1.5rem" />}
             >
               <Box className="login_endbtn" color="gray">
-                {' '}
+                {" "}
                 Or Sign up with google account
               </Box>
             </Button>

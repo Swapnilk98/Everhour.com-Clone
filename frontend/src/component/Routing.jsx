@@ -1,21 +1,24 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import DashboardMain from './DashBoardMain/DashboardMain';
+import Landing from './Landing';
+import Login from './login/Login';
 import Navbar from './Navbar/Navbar';
 import Confirmation from './Payment/Confirmation';
-import Otp from './Payment/Otp';
-import Setting from './Payment/Setting';
-import CombineEmptyandFilled from './Products/CombineEmptyandFilled';
-import SimpleSidebar from './SideBar/SideBar';
+import SignUp from './Signup/SignUp';
+import SignupPages from './Signup/SignupPages';
+
 
 const Routing = () => {
   return (
     <>
       <Navbar />
       <Routes>
-        {/* <Route path='/project' element={<CombineEmptyandFilled/>}/> */}
-        // <Route path="/otp" element={<Otp />} />
-        {/* <Route path='/setting' element={<Setting/>}/> */}
+      
+      <Route path="/login" element={<Login /> } />
+      <Route path="/signup" element={<SignUp /> } />
+      <Route path="/signupage" element={<SignupPages /> } />
+      <Route path="/" element={<Landing /> } />
         <Route path="/confirmation" element={<Confirmation />} />
         <Route path="/dashboard" element={<DashboardMain />} />
       </Routes>
