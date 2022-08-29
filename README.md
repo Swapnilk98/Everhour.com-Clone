@@ -1,7 +1,7 @@
 # smooth-dock-1057
 construct week project masai
 <h1>Project Title</h1> 
-<a href="https://elegant-centaur-093589.netlify.app/">Clone of Everhour.com</a>
+<a href="https://everhour.netlify.app/pricing">Clone of Everhour.com</a>
 <hr>
 <p> Everhour is an app that calculates your work hours, the work hours of your team, or a particular team member and collaborate  this data together into handy detailed reports</p>
 <h2>This is a collaborative Project from Masai School in the Construct Week. We are 4 members of the team:</h2>
