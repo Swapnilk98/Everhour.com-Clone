@@ -13,7 +13,7 @@ construct week project masai
 <br>
 <a href="https://github.com/Sranjan4321">Shashi Ranjan</a>
 <br>
-<a href="https://github.com/prabhuRV">Swapnil Kapadnis</a>
+<a href="https://github.com/prabhuRV">Katravath Prabhu</a>
 <br>
 
 <h3>Tech Stacks used </h3>
