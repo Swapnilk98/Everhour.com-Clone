@@ -39,12 +39,12 @@ All the images and links are used from the original website to get a better expe
 
 <h4>Landing Page</h4>
 
-<img src="https://miro.medium.com/max/1400/1*8tZqGJ1Fc76Xa3D8ngjqfQ.png" />
+<img src="https://miro.medium.com/max/1400/1*CPej-eaRrWl-mUEBpdqx4Q.png" />
 <hr>
 <h4>Login Page</h4>
-<img src="https://cdn-images-1.medium.com/max/800/1*UNx1tI51MUCN_iiIIpDgCw.png"/><hr>
+<img src="https://cdn-images-1.medium.com/max/800/1*8tZqGJ1Fc76Xa3D8ngjqfQ.png"/><hr>
 <h4>Signup Page</h4>
-<img src=""/><hr>
+<img src="https://cdn-images-1.medium.com/max/800/1*UNx1tI51MUCN_iiIIpDgCw.png"/><hr>
 <h4>Dashboard Page</h4>
 <img src="Screenshot (289).png (110.9 KB)"/><hr>
 
