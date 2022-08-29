@@ -41,9 +41,11 @@ All the images and links are used from the original website to get a better expe
 
 <img src=""/> 
 <hr>
-<h4>Product Page</h4>
+<h4>Login Page</h4>
 <img src=""/><hr>
-<h4>Cart Page</h4>
+<h4>Signup Page</h4>
+<img src=""/><hr>
+<h4>Dashboard Page</h4>
 <img src=""/><hr>
 
 <hr>
