@@ -20,13 +20,12 @@ construct week project masai
 
 <li>REACT</li>
 <li>REDUX </li>
-
 <li>CSS</li>
-
+<li>ChakraUI</li>
 <li>EXPRESS</li>
-
 <li>MONGODB</li>
-
+<li>NodeJs</li>
+<li>Mongoose</li>
 
 
 <hr><br>
