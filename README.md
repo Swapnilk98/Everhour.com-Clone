@@ -39,7 +39,7 @@ All the images and links are used from the original website to get a better expe
 
 <h4>Landing Page</h4>
 
-<img src="https://drive.google.com/file/d/1arKNjbNcCyUD2CIkxoCMJVlgfmBq5bUx/view?usp=sharing"/> 
+<img src="https://drive.google.com/file/d/1arKNjbNcCyUD2CIkxoCMJVlgfmBq5bUx/view?usp=sharing" />
 <hr>
 <h4>Login Page</h4>
 <img src=""/><hr>
