@@ -46,7 +46,7 @@ All the images and links are used from the original website to get a better expe
 <h4>Signup Page</h4>
 <img src=""/><hr>
 <h4>Dashboard Page</h4>
-<img src=""/><hr>
+<img src="Screenshot (289).png (110.9 KB)"/><hr>
 
 <hr>
 I would say, thank you for reading this here. I hope you will find it helpful. I and my teammates completed this project with full enthusiasm, focus, and hard work. It may have some bugs, but we will try to fix them soon.
